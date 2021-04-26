@@ -12,3 +12,48 @@ This is a starter template for [Learn Next.js](https://nextjs.org/learn).
 - Head コンポーネントを import する。`import Head from next/head`
 - Head コンポーネントは`<head>タグ`に変換される。
 - ページごとに設定できるので SEO 対策になる。
+
+## Pre-rendering
+
+- Next.js はデフォルトで全ページを `Pre-render` をする。
+- `Pre-rendering` = 事前に HTML を生成すること。(サーバー側で HTML を生成しているような形)
+- ブラウザの負荷を下げて、表示を高速化 👉 SEO 対策にも繋がる！
+- 検索エンジンのクローラーにコンテンツを見せられる（事前に HTML を表示）
+
+### 2 種類のレンダリング方式
+
+- 1.`Static Generation` ... ビルド時にサーバー側で HTML を生成する。EC サイトやブログサイトに向いている。
+
+  - SEO ◎
+  - 表示速度が高速
+  - 更新頻度が低い方に向いている
+
+- 2.`Server-side-Rendering` ... リクエスト時にサーバー側で HTML を生成する。
+  - SEO ○
+  - いくつものユーザーが情報を更新できるようなページが有効。SNS とかグループチャットとか。
+  - 更新頻度が高い方に向いている
+
+ページの特徴によって使い分けることができる。基本的には、`Static Generation` を使用。
+
+ちなみに `create-react-app` は、`Client-Side-Rendering` を使用している。
+
+### 性的ジェネレーション
+
+外部データなし
+
+- 1.ビルド時に HTML をレンダリング
+
+外部データあり
+
+- 1.ビルド時に DB や外部 API からデータを取得 `getStaticProps()`を使用
+  - async/await を使って非同期処理を制御
+  - page コンポーネントのみ使用可能
+  - 開発環境ではリクエスト毎に実行される
+- 2.取得したデータを使って HTML をレンダリング
+
+### サーバーサイドレンダリング
+
+- `getServerSideProps` を使用。
+- 外部データを取得する時
+- async/await を使って非同期処理を制御できる
+- page コンポーネントのみ使用可能
