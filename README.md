@@ -57,3 +57,22 @@ This is a starter template for [Learn Next.js](https://nextjs.org/learn).
 - 外部データを取得する時
 - async/await を使って非同期処理を制御できる
 - page コンポーネントのみ使用可能
+
+## Dynamic Routes
+
+- ファイル名に`[]`を使うと `Dynamic Routes` になる
+
+外部データからデータを取得する。
+
+```
+pages/posts/[id].js
+　　　
+     posts/
+        ┝ https://example.com/posts/pre-rendering.mdみたいな
+        └ ssg-ssr
+```
+
+- `getStaticPath` で静的ファイルを生成する。
+- `paths` と `fallback` を返す
+  - `paths` 事前ビルとするパス対象を指定するパラメータ（データを返す）
+  - `fallback` 事前ビルドしたパス以外にアクセスした時の動作（指定パス以外なら 404 を返す：false 指定）true なら事前ファイルを表示
