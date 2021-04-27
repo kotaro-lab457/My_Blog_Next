@@ -21,6 +21,7 @@ export default function Post({ postData }) {
   );
 }
 
+// サーバーサイドを実行している
 export async function getStaticPaths() {
   const paths = getAllPostIds();
   return {
@@ -29,6 +30,7 @@ export async function getStaticPaths() {
   };
 }
 
+// サーバーサイドを実行している
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
   return {
