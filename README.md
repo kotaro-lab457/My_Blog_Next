@@ -76,3 +76,6 @@ pages/posts/[id].js
 - `paths` と `fallback` を返す
   - `paths` 事前ビルとするパス対象を指定するパラメータ（データを返す）
   - `fallback` 事前ビルドしたパス以外にアクセスした時の動作（指定パス以外なら 404 を返す：false 指定）true なら事前ファイルを表示
+
+[http://localhost:3000/posts/pre-rendering](http://localhost:3000/posts/pre-rendering)
+[http://localhost:3000/posts/ssg-ssr](http://localhost:3000/posts/ssg-ssr)

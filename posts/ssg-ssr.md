@@ -11,6 +11,7 @@ You can use Static Generation for many types of pages, including:
 - Blog posts
 - E-commerce product listings
 - Help and documentation
+- 長野の軽井沢でキャンプや！
 
 You should ask yourself: "Can I pre-render this page **ahead** of a user's request?" If the answer is yes, then you should choose Static Generation.
 
