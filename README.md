@@ -110,3 +110,9 @@ export default function handler(req, res) {
 Vercel サイト:[https://vercel.com/new](https://vercel.com/new)
 
 今回の開発サイト：[https://my-blog-next.vercel.app/](https://my-blog-next.vercel.app/)
+
+# 予備知識
+
+## gray-matter
+
+投稿記事の md ファイルの fromtmatter と本文を解析して JSON データに変換するツール。Json データを React の props に渡す。
