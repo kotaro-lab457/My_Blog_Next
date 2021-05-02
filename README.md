@@ -78,4 +78,41 @@ pages/posts/[id].js
   - `fallback` 事前ビルドしたパス以外にアクセスした時の動作（指定パス以外なら 404 を返す：false 指定）true なら事前ファイルを表示
 
 [http://localhost:3000/posts/pre-rendering](http://localhost:3000/posts/pre-rendering)
+
 [http://localhost:3000/posts/ssg-ssr](http://localhost:3000/posts/ssg-ssr)
+
+### Catch-all Routes
+
+- `...`括弧内`[]`に３つのドットを追加することで、動的ルートを拡張して全てのパスをキャッチできる。`[...id].js`みたいな
+
+配列として id を渡す `id:["Hero","deku"]`を`params`に入れる.
+
+## API
+
+- 動的 API ルーティング
+
+```javascript
+export default function handler(req, res) {
+  const { pid } = req.query;
+  res.end(`Post: ${pid}`);
+}
+```
+
+リクエストのクエリフィールドから URL の動的パスを取得できる
+
+## Vercel
+
+- デプロイ環境の構築
+- カスタムドメインが使える
+- 開発用と本番用の URL がある。git での更新など
+  - プレビュー用の URL が発行される
+
+Vercel サイト:[https://vercel.com/new](https://vercel.com/new)
+
+今回の開発サイト：[https://my-blog-next.vercel.app/](https://my-blog-next.vercel.app/)
+
+# 予備知識
+
+## gray-matter
+
+投稿記事の md ファイルの fromtmatter と本文を解析して JSON データに変換するツール。Json データを React の props に渡す。
