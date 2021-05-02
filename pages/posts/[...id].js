@@ -31,7 +31,7 @@ export async function getStaticPaths() {
 
 // サーバーサイドを実行している
 export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.id);
+  const postData = await getPostData(params.id.join("/"));
   return {
     props: {
       postData,
