@@ -37,7 +37,7 @@ This is a starter template for [Learn Next.js](https://nextjs.org/learn).
 
 ちなみに `create-react-app` は、`Client-Side-Rendering` を使用している。
 
-### 性的ジェネレーション
+### 静的ジェネレーション
 
 外部データなし
 
@@ -116,3 +116,7 @@ Vercel サイト:[https://vercel.com/new](https://vercel.com/new)
 ## gray-matter
 
 投稿記事の md ファイルの fromtmatter と本文を解析して JSON データに変換するツール。Json データを React の props に渡す。
+
+## remark
+
+remark でマークダウンファイルの作成、記述ができる。
