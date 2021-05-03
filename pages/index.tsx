@@ -1,7 +1,13 @@
-import { GetStaticProps } from "next";
 import Head from "next/head";
+import Image from "next/image";
 import Layout, { siteTitle } from "../components/layout";
+
+import { Top } from "../components/PageList/Top";
+import { Work } from "../components/PageList/Work";
+import { About } from "../components/PageList/About";
+
 import { getSortedPostsData } from "../lib/posts";
+import { GetStaticProps } from "next";
 import Link from "next/link";
 import Date from "../components/date";
 
@@ -19,6 +25,7 @@ type Props = {
     id: string;
     title: string;
     date: string;
+    thumb: string;
   }[];
 };
 
@@ -28,18 +35,21 @@ export default function Home({ allPostsData }: Props) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
+      <Top />
+      <About />
+      <Work />
+      <h2>Blog</h2>
+      <p>ブログページの作成じゃ！</p>
       <section>
-        <p>僕の田原の親友のYasuです。</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this on{" "}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
-      </section>
-      <section>
-        <h2>Blog</h2>
         <ul>
-          {allPostsData.map(({ id, date, title }) => (
+          {allPostsData.map(({ id, date, title, thumb }) => (
             <li key={id}>
+              <Image
+                priority
+                src={`/images/${thumb}`}
+                height={144}
+                width={144}
+              />
               <Link href={`/posts/${id}`}>
                 <a>{title}</a>
               </Link>
