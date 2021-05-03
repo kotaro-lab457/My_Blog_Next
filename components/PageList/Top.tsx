@@ -7,6 +7,11 @@ export const Top: React.FC = () => {
       <section>
         <p>Suzuki Kotaro</p>
         <Image priority src="/images/profile.png" height={144} width={144} />
+        <p>現在、エンジニア転職を目指しています！</p>
+        <p>
+          フロントエンドを選考しており、React
+          ,TypeScriptを中心に学習しています！
+        </p>
       </section>
     </>
   );

@@ -39,7 +39,6 @@ export default function Home({ allPostsData }: Props) {
       <h2>Blog</h2>
       <p>ブログページの作成じゃ！</p>
       <section>
-        <h2>Blog</h2>
         <ul>
           {allPostsData.map(({ id, date, title }) => (
             <li key={id}>

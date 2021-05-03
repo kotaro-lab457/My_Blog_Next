@@ -5,6 +5,7 @@ export const Work: React.FC = () => {
     <>
       <h2>Work</h2>
       <p>portfolio</p>
+      <p>チーム開発</p>
     </>
   );
 };
