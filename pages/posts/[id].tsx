@@ -44,6 +44,7 @@ const Post: React.FC<props> = ({ postData }) => {
         <div>
           <Date dateString={postData.date} />
         </div>
+        {/* dangerouslySetInnerHTMLはオブジェクトを渡すことで表示ができる。 */}
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
     </Layout>

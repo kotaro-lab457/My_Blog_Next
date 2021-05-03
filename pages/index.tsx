@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import Layout, { siteTitle } from "../components/layout";
 
 import { Top } from "../components/PageList/Top";
@@ -24,6 +25,7 @@ type Props = {
     id: string;
     title: string;
     date: string;
+    thumb: string;
   }[];
 };
 
@@ -40,8 +42,14 @@ export default function Home({ allPostsData }: Props) {
       <p>ブログページの作成じゃ！</p>
       <section>
         <ul>
-          {allPostsData.map(({ id, date, title }) => (
+          {allPostsData.map(({ id, date, title, thumb }) => (
             <li key={id}>
+              <Image
+                priority
+                src={`/images/${thumb}`}
+                height={144}
+                width={144}
+              />
               <Link href={`/posts/${id}`}>
                 <a>{title}</a>
               </Link>

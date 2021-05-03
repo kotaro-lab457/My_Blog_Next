@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { Footer } from "./common/Footer";
-import { Header } from "./common/header";
+import { Header } from "./common/Header";
 
 export const siteTitle = "S.Kotaro Blog Web site";
 
@@ -15,11 +15,6 @@ const Layout: React.FC = ({ children }) => {
       </Head>
       <Header />
       <main>{children}</main>
-      <div>
-        <Link href="/">
-          <a>← Back to home</a>
-        </Link>
-      </div>
       <Footer />
     </div>
   );
