@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Footer } from "./common/Footer";
 import { Header } from "./common/Header";
 
-export const siteTitle = "S.Kotaro Blog Web site";
+export const siteTitle = "S.Kotaro Blog Web";
 
 const Layout: React.FC = ({ children }) => {
   return (
