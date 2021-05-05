@@ -2,9 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Layout, { siteTitle } from "../components/layout";
 
-import { Top } from "../components/Page/Top";
-import { Work } from "../components/Page/Work";
-import { About } from "../components/Page/About";
+import { Top } from "./Top";
 
 import { getSortedPostsData } from "../lib/posts";
 import { GetStaticProps } from "next";
@@ -36,8 +34,6 @@ export default function Home({ allPostsData }: Props) {
         <title>{siteTitle}</title>
       </Head>
       <Top />
-      <About />
-      <Work />
       <h2>Blog</h2>
       <p>ブログページの作成じゃ！</p>
       <section>
