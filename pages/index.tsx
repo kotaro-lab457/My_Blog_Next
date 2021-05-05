@@ -2,9 +2,9 @@ import Head from "next/head";
 import Image from "next/image";
 import Layout, { siteTitle } from "../components/layout";
 
-import { Top } from "../components/PageList/Top";
-import { Work } from "../components/PageList/Work";
-import { About } from "../components/PageList/About";
+import { Top } from "../components/Page/Top";
+import { Work } from "../components/Page/Work";
+import { About } from "../components/Page/About";
 
 import { getSortedPostsData } from "../lib/posts";
 import { GetStaticProps } from "next";
@@ -50,6 +50,7 @@ export default function Home({ allPostsData }: Props) {
                 height={144}
                 width={144}
               />
+              <br />
               <Link href={`/posts/${id}`}>
                 <a>{title}</a>
               </Link>
