@@ -1,9 +1,14 @@
 import React from "react";
 
+const footer = {
+  display: "flex",
+  justifyContent: "center",
+};
+
 export const Footer: React.FC = () => {
   return (
-    <div>
+    <footer style={footer}>
       <p>copylighting kotaro-suzuki</p>
-    </div>
+    </footer>
   );
 };
