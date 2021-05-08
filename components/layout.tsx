@@ -1,22 +1,27 @@
 import Head from "next/head";
-import Link from "next/link";
+
 import { Footer } from "./common/Footer";
 import { Header } from "./common/Header";
 
 export const siteTitle = "S.Kotaro Blog Web";
 
+const pages = {
+  width: "65vw",
+  margin: "0 auto",
+};
+
 const Layout: React.FC = ({ children }) => {
   return (
-    <div>
+    <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Header />
-      <main>{children}</main>
+      <main style={pages}>{children}</main>
       <Footer />
-    </div>
+    </>
   );
 };
 

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import Layout, { siteTitle } from "../components/layout";
+import Layout from "../components/layout";
 import Head from "next/head";
 
 const Work: React.FC = () => {
@@ -9,7 +9,7 @@ const Work: React.FC = () => {
     <>
       <Layout>
         <Head>
-          <title>{siteTitle}</title>
+          <title>S.kotaro Work site</title>
         </Head>
         <h2>Work</h2>
         <div>
