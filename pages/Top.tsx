@@ -11,10 +11,11 @@ const myName = {
 
 const topPage = {
   display: "flex",
+  margin: "0 3rem",
 };
 
 const useStyles = makeStyles((theme) => ({
-  large: {
+  middle: {
     width: theme.spacing(18),
     height: theme.spacing(18),
   },
@@ -26,7 +27,7 @@ export const Top: React.FC = () => {
     <>
       <section style={topPage}>
         <div>
-          <Avatar className={classes.large}>
+          <Avatar className={classes.middle}>
             <Image
               priority
               src="/images/profile.png"

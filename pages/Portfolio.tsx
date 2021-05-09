@@ -24,9 +24,12 @@ const Portfolio = () => {
             />
           </div>
           <div>
-            <Link href="https://github.com/kotaro-lab457/MyPortfolio">
-              ソースコード
-            </Link>
+            <p>
+              Github：
+              <Link href="https://github.com/kotaro-lab457/MyPortfolio">
+                ソースコード
+              </Link>
+            </p>
             <p>
               URL：
               <Link href="https://my-portfolio-986db.web.app/">

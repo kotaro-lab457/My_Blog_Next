@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import Layout, { siteTitle } from "../components/layout";
-
 import { Top } from "./Top";
 
 import { getSortedPostsData } from "../lib/posts";
@@ -27,6 +26,21 @@ type Props = {
   }[];
 };
 
+const list = {
+  listStyle: "none",
+  display: "flex",
+  cursor: "pointer",
+};
+
+const smallTime = {
+  display: "block",
+};
+
+const item = {
+  width: "300px",
+  margin: "20px",
+};
+
 export default function Home({ allPostsData }: Props) {
   return (
     <Layout>
@@ -35,25 +49,26 @@ export default function Home({ allPostsData }: Props) {
       </Head>
       <Top />
       <h2>Blog</h2>
-      <p>ブログページの作成じゃ！</p>
       <section>
-        <ul>
+        <ul style={list}>
           {allPostsData.map(({ id, date, title, thumb }) => (
-            <li key={id}>
-              <Image
-                priority
-                src={`/images/${thumb}`}
-                height={144}
-                width={144}
-              />
-              <br />
-              <Link href={`/posts/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <br />
-              <small>
-                <Date dateString={date} />
-              </small>
+            <li key={id} style={item}>
+              <div>
+                <Link href={`/posts/${id}`}>
+                  <Image
+                    priority
+                    src={`/images/${thumb}`}
+                    height={230}
+                    width={280}
+                  />
+                </Link>
+                <small style={smallTime}>
+                  <Date dateString={date} />
+                </small>
+                <Link href={`/posts/${id}`}>
+                  <p>{title}</p>
+                </Link>
+              </div>
             </li>
           ))}
         </ul>
