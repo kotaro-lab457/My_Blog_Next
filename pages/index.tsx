@@ -26,6 +26,11 @@ type Props = {
   }[];
 };
 
+const blogPage = {
+  width: "70vw",
+  margin: "0 auto",
+};
+
 const list = {
   listStyle: "none",
   display: "flex",
@@ -48,31 +53,33 @@ export default function Home({ allPostsData }: Props) {
         <title>{siteTitle}</title>
       </Head>
       <Top />
-      <h2>Blog</h2>
-      <section>
-        <ul style={list}>
-          {allPostsData.map(({ id, date, title, thumb }) => (
-            <li key={id} style={item}>
-              <div>
-                <Link href={`/posts/${id}`}>
-                  <Image
-                    priority
-                    src={`/images/${thumb}`}
-                    height={230}
-                    width={280}
-                  />
-                </Link>
-                <small style={smallTime}>
-                  <Date dateString={date} />
-                </small>
-                <Link href={`/posts/${id}`}>
-                  <p>{title}</p>
-                </Link>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </section>
+      <div style={blogPage}>
+        <h2>Blog Posts</h2>
+        <section>
+          <ul style={list}>
+            {allPostsData.map(({ id, date, title, thumb }) => (
+              <li key={id} style={item}>
+                <div>
+                  <Link href={`/posts/${id}`}>
+                    <Image
+                      priority
+                      src={`/images/${thumb}`}
+                      height={230}
+                      width={280}
+                    />
+                  </Link>
+                  <small style={smallTime}>
+                    <Date dateString={date} />
+                  </small>
+                  <Link href={`/posts/${id}`}>
+                    <p>{title}</p>
+                  </Link>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </div>
     </Layout>
   );
 }
