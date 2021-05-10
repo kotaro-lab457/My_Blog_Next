@@ -10,6 +10,7 @@ const header = {
 
 const title = {
   fontSize: "2rem",
+  fontFamily: "Apple Chancery",
 };
 
 const link = {
@@ -21,7 +22,7 @@ export const Header: React.FC = () => {
   return (
     <>
       <header style={header}>
-        <h1 style={title}>こたろー Blog</h1>
+        <h1 style={title}>Kotaro Blog</h1>
         <div>
           <Link href="/">
             <a style={link}>Top</a>
