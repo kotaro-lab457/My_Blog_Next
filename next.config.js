@@ -6,6 +6,21 @@ module.exports = {
       };
     }
 
+    config.module.rules.push({
+      test: /\.(png|jpg|gif|svg)$/,
+      use: [
+        {
+          loader: "file-loader",
+          options: {
+            name: "[name].[contenthash].[ext]",
+            outputPath: "img",
+            publicPath: "/img",
+          },
+        },
+        "image-webpack-loader",
+      ],
+    });
+
     return config;
   },
 };

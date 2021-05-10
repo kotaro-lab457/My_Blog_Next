@@ -2,11 +2,19 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import img from "./img/img_sky.png";
+
 import { makeStyles } from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
 
 const myName = {
   fontFamily: "Courier New",
+};
+
+const image = {
+  width: "100%",
+  height: "500px",
+  backgroundImage: `url(${img})`,
 };
 
 const topPage = {
@@ -25,6 +33,7 @@ export const Top: React.FC = () => {
   const classes = useStyles();
   return (
     <>
+      <div style={image}></div>
       <section style={topPage}>
         <div>
           <Avatar className={classes.middle}>
