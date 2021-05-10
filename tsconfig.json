@@ -6,10 +6,6 @@
       "dom.iterable",
       "esnext"
     ],
-    "typeRoots": [
-      "node_modules/@types",
-      "types"
-    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -26,8 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/**/*",
-    "types/**/*", "components/date.js", "lib/posts.js"  ],
+     "components/date.js", "lib/posts.js"  ],
   "exclude": [
     "node_modules"
   ]
