@@ -1,7 +1,10 @@
-import { GetStaticProps } from "next";
 import Head from "next/head";
+import Image from "next/image";
 import Layout, { siteTitle } from "../components/layout";
+import { Top } from "./Top";
+
 import { getSortedPostsData } from "../lib/posts";
+import { GetStaticProps } from "next";
 import Link from "next/link";
 import Date from "../components/date";
 
@@ -19,7 +22,23 @@ type Props = {
     id: string;
     title: string;
     date: string;
+    thumb: string;
   }[];
+};
+
+const list = {
+  listStyle: "none",
+  display: "flex",
+  cursor: "pointer",
+};
+
+const smallTime = {
+  display: "block",
+};
+
+const item = {
+  width: "300px",
+  margin: "20px",
 };
 
 export default function Home({ allPostsData }: Props) {
@@ -28,25 +47,28 @@ export default function Home({ allPostsData }: Props) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
+      <Top />
+      <h2>Blog</h2>
       <section>
-        <p>僕の田原の親友のYasuです。</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this on{" "}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
-      </section>
-      <section>
-        <h2>Blog</h2>
-        <ul>
-          {allPostsData.map(({ id, date, title }) => (
-            <li key={id}>
-              <Link href={`/posts/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <br />
-              <small>
-                <Date dateString={date} />
-              </small>
+        <ul style={list}>
+          {allPostsData.map(({ id, date, title, thumb }) => (
+            <li key={id} style={item}>
+              <div>
+                <Link href={`/posts/${id}`}>
+                  <Image
+                    priority
+                    src={`/images/${thumb}`}
+                    height={230}
+                    width={280}
+                  />
+                </Link>
+                <small style={smallTime}>
+                  <Date dateString={date} />
+                </small>
+                <Link href={`/posts/${id}`}>
+                  <p>{title}</p>
+                </Link>
+              </div>
             </li>
           ))}
         </ul>
