@@ -6,7 +6,7 @@ import { Header } from "./common/Header";
 export const siteTitle = "S.Kotaro Blog Web";
 
 const pages = {
-  width: "100vw",
+  width: "100%",
   margin: "0 auto",
 };
 

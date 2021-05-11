@@ -8,7 +8,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
 
 const about = {
-  padding: "0 4rem",
+  width: "50vw",
+  margin: "0 auto",
 };
 
 const aboutMine = {
@@ -77,6 +78,18 @@ const About: React.FC = () => {
               <p>
                 Git / Github / FireBase / styled-component (Atomic Design) /
                 Google Books API / Twitter API
+              </p>
+            </div>
+            <div>
+              <h3>エンジニアとしての一つの目標</h3>
+              <p>
+                僕は本番に緊張したり、不安を抱え込みやすくていろいろ余計なことを考えてしまい心配性な一面があります。
+                <br />
+                そんな時に、マインドフルネス瞑想や筋トレを行い、自分としっかり向き合うことで思考が整理され行動に自信がつき新しい体験や行動に繋がりました。
+                <br />
+                <br />
+                僕の中では、人生を大きく変えてくれた瞑想や筋トレをITサービスで不安症や精神的に弱い人たちの気持ちを少しでも改善しより良い人生に変わるようなサービスを提供し、
+                一人でも多く使っていただきたいという目標があります。
               </p>
             </div>
           </div>
