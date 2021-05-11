@@ -5,6 +5,11 @@ import Link from "next/link";
 
 import Layout from "../components/layout";
 
+const portfolio = {
+  width: "60vw",
+  margin: "2rem auto",
+};
+
 const Portfolio = () => {
   return (
     <>
@@ -12,8 +17,8 @@ const Portfolio = () => {
         <title>S.kotaro portfolio site</title>
       </Head>
       <Layout>
-        <div>
-          <h2>Read Out</h2>
+        <div style={portfolio}>
+          <h1>Read Out</h1>
           <p>読書アウトプットWebアプリ</p>
           <div>
             <Image
@@ -28,6 +33,15 @@ const Portfolio = () => {
               Github：
               <Link href="https://github.com/kotaro-lab457/MyPortfolio">
                 ソースコード
+              </Link>
+            </p>
+            <p>
+              Qiita解説記事は
+              <Link
+                href="https://qiita.com/s_taro/items/bb607598d8eb45c70d39
+            "
+              >
+                こちら
               </Link>
             </p>
             <p>
