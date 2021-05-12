@@ -7,7 +7,7 @@ import Head from "next/head";
 
 const work = {
   width: "80vw",
-  height: "80vh",
+  height: "85vh",
   margin: "0 auto",
 };
 
@@ -58,7 +58,9 @@ const Work: React.FC = () => {
                 width={600}
                 height={300}
               />
-              <p>チーム開発の制作アプリ</p>
+              <p>
+                チーム開発の制作アプリ ／Githubを使用して共同開発を行いました。
+              </p>
               <p>※リンクはありません</p>
             </div>
           </div>

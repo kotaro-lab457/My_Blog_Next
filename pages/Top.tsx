@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { FaTwitter, FaGithub } from "react-icons/fa";
+
 import { makeStyles } from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
 
@@ -40,6 +42,16 @@ const background: { [key: string]: string } = {
 const image = {
   width: "100%",
   height: "100%",
+};
+
+const snsIcons: { [key: string]: string } = {
+  textAlign: "right",
+};
+
+const iconItem = {
+  marginRight: "1rem",
+  fontSize: "24px",
+  cursor: "pointer",
 };
 
 const useStyles = makeStyles((theme) => ({
@@ -83,6 +95,18 @@ export const Top: React.FC = () => {
               <Link href="/Portfolio">こちら</Link>
               になります。
             </p>
+            <div style={snsIcons}>
+              <span style={iconItem}>
+                <Link href="https://github.com/kotaro-lab457">
+                  <FaGithub />
+                </Link>
+              </span>
+              <span style={iconItem}>
+                <Link href="https://twitter.com/programming0457">
+                  <FaTwitter />
+                </Link>
+              </span>
+            </div>
           </div>
         </section>
       </div>
