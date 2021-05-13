@@ -7,6 +7,8 @@ import {
   AiOutlineCheckCircle,
 } from "react-icons/ai";
 
+import { CgNotes } from "react-icons/cg";
+
 const header = {
   display: "flex",
   justifyContent: "space-between",
@@ -56,7 +58,12 @@ export const Header: React.FC = () => {
             </a>
           </Link>
           <Link href="/Blog">
-            <a style={link}>Blog</a>
+            <a style={link}>
+              <span style={linkIcon}>
+                <CgNotes />
+              </span>
+              Blog
+            </a>
           </Link>
           <Link href="/Work">
             <a style={link}>
