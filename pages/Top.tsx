@@ -2,10 +2,9 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { FaTwitter, FaGithub } from "react-icons/fa";
-
 import { makeStyles } from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
+import SnsIcons from "../components/icons/SnsIcons";
 
 const myName = {
   fontFamily: "Courier New",
@@ -44,22 +43,16 @@ const image = {
   height: "100%",
 };
 
-const snsIcons: { [key: string]: string } = {
-  textAlign: "right",
-};
-
-const iconItem = {
-  marginRight: "1rem",
-  fontSize: "24px",
-  cursor: "pointer",
-};
-
 const useStyles = makeStyles((theme) => ({
   middle: {
     width: theme.spacing(18),
     height: theme.spacing(18),
   },
 }));
+
+const snsIcons: { [key: string]: string } = {
+  textAlign: "right",
+};
 
 export const Top: React.FC = () => {
   const classes = useStyles();
@@ -96,16 +89,7 @@ export const Top: React.FC = () => {
               になります。
             </p>
             <div style={snsIcons}>
-              <span style={iconItem}>
-                <Link href="https://github.com/kotaro-lab457">
-                  <FaGithub />
-                </Link>
-              </span>
-              <span style={iconItem}>
-                <Link href="https://twitter.com/programming0457">
-                  <FaTwitter />
-                </Link>
-              </span>
+              <SnsIcons />
             </div>
           </div>
         </section>
