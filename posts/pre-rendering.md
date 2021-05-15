@@ -1,7 +1,7 @@
 ---
-title: "長野で久しぶりに遊ぶの楽しみ！！"
-date: "2020-05-07"
-thumb: profile.png
+title: "長野阿智村　キャンプ場"
+date: "2021-05-20"
+thumb: "camp_1.png"
 category: "キャンプ"
 tag:
   - タグ1
