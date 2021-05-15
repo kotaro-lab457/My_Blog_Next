@@ -1,7 +1,7 @@
 ---
-title: "四人で集まるのも久しぶりだから、ワクワクしてるっすwww"
-date: "2020-05-06"
-thumb: profile.png
+title: "Next.jsブログを解説しました！"
+date: "2021-05-15"
+thumb: "nextJsBlog.png"
 ---
 
 - 長野の軽井沢でキャンプや！

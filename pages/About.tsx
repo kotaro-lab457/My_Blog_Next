@@ -75,7 +75,7 @@ const About: React.FC = () => {
               <Avatar className={classes.middle}>
                 <Image
                   priority
-                  src="/images/profile.png"
+                  src="/images/profile.jpeg"
                   height={144}
                   width={144}
                 />
