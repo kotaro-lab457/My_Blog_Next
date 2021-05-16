@@ -4,7 +4,7 @@ import Date from "../../components/date";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import { GetStaticPaths, GetStaticProps } from "next";
 
-// サーバーサイドを実行している
+// サーバーサイドを実行しているAPI
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getAllPostIds();
   return {
@@ -13,7 +13,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-// サーバーサイドを実行している
+// サーバーサイドを実行しているAPI
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const postData = await getPostData(params.id);
   return {

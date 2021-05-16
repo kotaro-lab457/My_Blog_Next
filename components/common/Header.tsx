@@ -1,19 +1,37 @@
 import React from "react";
 import Link from "next/link";
 
+import {
+  AiOutlineHome,
+  AiOutlineUser,
+  AiOutlineCheckCircle,
+} from "react-icons/ai";
+
+import { CgNotes } from "react-icons/cg";
+
 const header = {
   display: "flex",
   justifyContent: "space-between",
   width: "100%",
-  padding: "0 2rem",
+  padding: "0 5rem",
 };
 
 const title = {
-  fontSize: "2rem",
+  fontSize: "3rem",
+  fontFamily: "Apple Chancery",
+  margin: "0",
 };
 
 const link = {
-  margin: "20px",
+  fontSize: "1.2rem",
+  color: "#000",
+  margin: "30px 20px 20px ",
+  display: "inline-block",
+};
+
+const linkIcon = {
+  paddingRight: "5px",
+  paddingTop: "5px",
   display: "inline-block",
 };
 
@@ -21,19 +39,39 @@ export const Header: React.FC = () => {
   return (
     <>
       <header style={header}>
-        <h1 style={title}>こたろー Blog</h1>
+        <h1 style={title}>Kotaro Blog</h1>
         <div>
           <Link href="/">
-            <a style={link}>Top</a>
+            <a style={link}>
+              <span style={linkIcon}>
+                <AiOutlineHome />
+              </span>
+              Top
+            </a>
           </Link>
           <Link href="/About">
-            <a style={link}>About</a>
+            <a style={link}>
+              <span style={linkIcon}>
+                <AiOutlineUser />
+              </span>
+              About
+            </a>
           </Link>
           <Link href="/Blog">
-            <a style={link}>Blog</a>
+            <a style={link}>
+              <span style={linkIcon}>
+                <CgNotes />
+              </span>
+              Blog
+            </a>
           </Link>
           <Link href="/Work">
-            <a style={link}>Work</a>
+            <a style={link}>
+              <span style={linkIcon}>
+                <AiOutlineCheckCircle />
+              </span>
+              Work
+            </a>
           </Link>
         </div>
       </header>
