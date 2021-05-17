@@ -2,6 +2,8 @@
 title: "Next.jsブログを解説しました！"
 date: "2021-05-15"
 thumb: "nextJsBlog.png"
+category: "プログラミング"
+tag: [Next.js, React]
 ---
 
 - 長野の軽井沢でキャンプや！
