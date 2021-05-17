@@ -18,20 +18,8 @@ const titlePage: { [key: string]: string } = {
   marginBottom: "2rem",
 };
 
-export const AboutTitle: React.FC = () => {
-  return (
-    <div style={titlePage}>
-      <h1>About me</h1>
-    </div>
-  );
-};
-
-export const WorkTitle: React.FC = () => {
-  return (
-    <div style={titlePage}>
-      <h1>Work</h1>
-    </div>
-  );
+export const TitleText: React.FC = ({ children }) => {
+  return <div style={titlePage}>{children}</div>;
 };
 
 export const Layout: React.FC = ({ children }) => {

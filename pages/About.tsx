@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Head from "next/head";
 
-import Layout, { siteTitle, AboutTitle } from "../components/layout";
+import Layout, { siteTitle, TitleText } from "../components/layout";
 
 import { AiFillFileText } from "react-icons/ai";
 import { BiWorld } from "react-icons/bi";
@@ -66,7 +66,9 @@ const About: React.FC = () => {
         <Head>
           <title>{siteTitle}</title>
         </Head>
-        <AboutTitle />
+        <TitleText>
+          <h1>About me</h1>
+        </TitleText>
         <div style={about}>
           <div>
             <div style={textTitle}>

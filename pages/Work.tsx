@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
 
-import Layout, { WorkTitle } from "../components/layout";
+import Layout, { TitleText } from "../components/layout";
 
 import { Grid, Paper } from "@material-ui/core";
 
@@ -28,7 +28,9 @@ const Work: React.FC = () => {
         <Head>
           <title>S.kotaro Work site</title>
         </Head>
-        <WorkTitle />
+        <TitleText>
+          <h1>Work</h1>
+        </TitleText>
         <div style={work}>
           <Grid container justify="space-around">
             <Grid item xs={5}>

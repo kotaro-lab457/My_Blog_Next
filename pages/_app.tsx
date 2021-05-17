@@ -1,8 +1,29 @@
 import "../styles/global.css";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
-}
+import React from "react";
+import Head from "next/head";
+import { AppProps } from "next/app";
+import CssBaseline from "@material-ui/core/CssBaseline";
 
-// _app.jsは特殊なファイルでRouteコンポーネントをラップする
-// 全ページで共通して実行させたい処理を実行する。またレイアウトも。
+const App: React.FC<AppProps> = ({ Component, pageProps }) => {
+  React.useEffect(() => {
+    // Remove the server-side injected CSS.
+    const jssStyles = document.querySelector("#jss-server-side");
+    if (jssStyles) {
+      jssStyles.parentElement.removeChild(jssStyles);
+    }
+  }, []);
+
+  return (
+    <React.Fragment>
+      <CssBaseline />
+      <Head>
+        <title>Create Next App</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Component {...pageProps} />
+    </React.Fragment>
+  );
+};
+
+export default App;
