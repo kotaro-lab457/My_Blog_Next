@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import Layout from "../../components/layout";
 import Date from "../../components/date";
 import { getAllPostIds, getPostData } from "../../lib/posts";
@@ -29,7 +30,13 @@ type props = {
     title: string;
     date: string;
     contentHtml: string;
+    thumb: string;
   };
+};
+
+const textPages = {
+  width: "45vw",
+  margin: "2rem auto",
 };
 
 // 外部データからデータを取得するDynamic Routesを使用
@@ -39,7 +46,13 @@ const Post: React.FC<props> = ({ postData }) => {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article>
+      <article style={textPages}>
+        <Image
+          priority
+          src={`/images/${postData.thumb}`}
+          height={430}
+          width={700}
+        />
         <h1>{postData.title}</h1>
         <div>
           <Date dateString={postData.date} />
