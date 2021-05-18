@@ -17,7 +17,7 @@ const topPage = {
 };
 
 const top = {
-  background: "#ebebeb",
+  // background: "#ebebeb",
   padding: "1rem 0",
 };
 

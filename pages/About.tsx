@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Head from "next/head";
 
-import Layout, { siteTitle } from "../components/layout";
+import Layout, { siteTitle, TitleText } from "../components/layout";
 
 import { AiFillFileText } from "react-icons/ai";
 import { BiWorld } from "react-icons/bi";
@@ -24,8 +24,12 @@ const aboutMine = {
   padding: "10px 50px",
 };
 
-const aboutText = {
+const aboutMe = {
   margin: "1rem 0 0 2rem",
+};
+
+const aboutText = {
+  marginLeft: "1rem",
 };
 
 const textTitle = {
@@ -44,7 +48,7 @@ const codeIcon = {
 };
 
 const snsIcons = {
-  marginBottom: "1rem",
+  margin: "0 0 1rem 1rem",
 };
 
 const useStyles = makeStyles((theme) => ({
@@ -62,8 +66,10 @@ const About: React.FC = () => {
         <Head>
           <title>{siteTitle}</title>
         </Head>
+        <TitleText>
+          <h1>About me</h1>
+        </TitleText>
         <div style={about}>
-          <h2>〜自己紹介〜</h2>
           <div>
             <div style={textTitle}>
               <span style={textIcon}>
@@ -80,7 +86,7 @@ const About: React.FC = () => {
                   width={144}
                 />
               </Avatar>
-              <div style={aboutText}>
+              <div style={aboutMe}>
                 <p>鈴木孝太郎（すずき こうたろう）</p>
                 <p>1997年05月15日生まれ / 24歳</p>
               </div>
@@ -100,7 +106,7 @@ const About: React.FC = () => {
               </span>
               <h3>趣味</h3>
             </div>
-            <div>
+            <div style={aboutText}>
               <p>
                 テニス🎾 / サウナ🧖‍♀️ / 読書📕 / キャンプ🏕 / 山登り⛰ / Netflix🎦
                 などなど　
@@ -125,15 +131,23 @@ const About: React.FC = () => {
                 </span>
                 <h3>プログラミングスキル</h3>
               </div>
-              <p>言語</p>
-              <p>HTML5 / CSS3(Scss) / JavaScript / TypeScript</p>
-              <p>フレームワーク</p>
-              <p>React / Redux / Redux Toolkit / Next.js / webpack</p>
-              <p>その他技術</p>
-              <p>
-                Git / Github / FireBase / styled-component (Atomic Design) /
-                Google Books API / Twitter API
-              </p>
+              <ul>
+                <li>
+                  <p>言語</p>
+                  <p>HTML5 / CSS3(Scss) / JavaScript / TypeScript</p>
+                </li>
+                <li>
+                  <p>フレームワーク</p>
+                  <p>React / Redux / Redux Toolkit / Next.js / webpack</p>
+                </li>
+                <li>
+                  <p>その他技術</p>
+                  <p>
+                    Git / Github / FireBase / styled-component (Atomic Design) /
+                    Google Books API / Twitter API
+                  </p>
+                </li>
+              </ul>
             </div>
             <div>
               <div style={textTitle}>

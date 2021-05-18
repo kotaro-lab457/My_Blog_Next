@@ -10,7 +10,19 @@ const pages = {
   margin: "0 auto",
 };
 
-const Layout: React.FC = ({ children }) => {
+const titlePage: { [key: string]: string } = {
+  width: "100%",
+  backgroundColor: "#ebebeb",
+  textAlign: "center",
+  padding: "1rem 0",
+  marginBottom: "2rem",
+};
+
+export const TitleText: React.FC = ({ children }) => {
+  return <div style={titlePage}>{children}</div>;
+};
+
+export const Layout: React.FC = ({ children }) => {
   return (
     <>
       <Head>

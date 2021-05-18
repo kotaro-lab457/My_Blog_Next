@@ -9,7 +9,7 @@ const iconGithub = {
   cursor: "pointer",
 };
 
-const iconTwiiter = {
+const iconTwitter = {
   color: "#00b0ff",
   marginRight: "1rem",
   fontSize: "24px",
@@ -31,7 +31,7 @@ const SnsIcons: React.FC = () => {
           <FaGithub />
         </Link>
       </span>
-      <span style={iconTwiiter}>
+      <span style={iconTwitter}>
         <Link href="https://twitter.com/programming0457">
           <FaTwitter />
         </Link>
