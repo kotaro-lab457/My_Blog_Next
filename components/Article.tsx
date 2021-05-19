@@ -1,8 +1,9 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 
 import Date from "./date";
+
+import { Paper, Button } from "@material-ui/core";
 
 interface listProps {
   list: {
@@ -13,29 +14,35 @@ interface listProps {
   };
 }
 
-const smallTime = {
-  display: "block",
+const blogText: { [key: string]: string } = {
+  textAlign: "left",
+  paddingLeft: "10px",
+};
+
+const blogTile = {
+  padding: "0",
 };
 
 const Article: React.FC<listProps> = (props) => {
   return (
     <>
-      <div>
-        <Link href={`/posts/${props.list.id}`}>
+      <Button style={blogTile} href={`/posts/${props.list.id}`}>
+        <Paper elevation={3}>
           <Image
             priority
             src={`/images/${props.list.thumb}`}
-            height={230}
-            width={280}
+            height={200}
+            width={300}
           />
-        </Link>
-        <small style={smallTime}>
-          <Date dateString={props.list.date} />
-        </small>
-        <Link href={`/posts/${props.list.id}`}>
-          <p>{props.list.title}</p>
-        </Link>
-      </div>
+          <div style={blogText}>
+            <small>
+              <Date dateString={props.list.date} />
+            </small>
+
+            <p>{props.list.title}</p>
+          </div>
+        </Paper>
+      </Button>
     </>
   );
 };

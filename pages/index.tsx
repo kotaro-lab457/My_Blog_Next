@@ -3,6 +3,7 @@ import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import { Top } from "./Top";
 import Article from "../components/article";
+import Qiita from "../components/Qiita";
 
 import { getSortedPostsData } from "../lib/posts";
 import { GetStaticProps } from "next";
@@ -17,8 +18,13 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const blogPage = {
-  width: "70vw",
-  margin: "0 auto",
+  width: "60vw",
+  margin: "4rem auto",
+  borderTop: "1px solid #000",
+};
+
+const blogTitle = {
+  padding: "0 3rem",
 };
 
 const list = {
@@ -40,7 +46,7 @@ export default function Home({ allPostsData }) {
       </Head>
       <Top />
       <div style={blogPage}>
-        <h2>Blog Posts</h2>
+        <h2 style={blogTitle}>Blog Posts</h2>
         <section>
           <ul style={list}>
             {allPostsData.map((list, id) => (
@@ -50,6 +56,10 @@ export default function Home({ allPostsData }) {
             ))}
           </ul>
         </section>
+      </div>
+      <div style={blogPage}>
+        <h2 style={blogTitle}>Qiita</h2>
+        <Qiita />
       </div>
     </Layout>
   );

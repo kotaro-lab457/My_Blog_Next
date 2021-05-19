@@ -29,10 +29,6 @@ const list = {
   cursor: "pointer",
 };
 
-const smallTime = {
-  display: "block",
-};
-
 const item = {
   width: "300px",
   margin: "20px",
