@@ -1,14 +1,12 @@
 import React from "react";
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 
 import Layout, { TitleText } from "../components/layout";
 
+import Article from "../components/article";
+
 import { getSortedPostsData } from "../lib/posts";
 import { GetStaticProps } from "next";
-
-import Date from "../components/date";
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();
@@ -17,15 +15,6 @@ export const getStaticProps: GetStaticProps = async () => {
       allPostsData,
     },
   };
-};
-
-type Props = {
-  allPostsData: {
-    id: string;
-    title: string;
-    date: string;
-    thumb: string;
-  }[];
 };
 
 const blogPage = {
@@ -49,7 +38,7 @@ const item = {
   margin: "20px",
 };
 
-const Blog = ({ allPostsData }: Props) => {
+const Blog = ({ allPostsData }) => {
   return (
     <Layout>
       <Head>
@@ -60,24 +49,9 @@ const Blog = ({ allPostsData }: Props) => {
       </TitleText>
       <section style={blogPage}>
         <ul style={list}>
-          {allPostsData.map(({ id, date, title, thumb }) => (
+          {allPostsData.map((list, id) => (
             <li key={id} style={item}>
-              <div>
-                <Link href={`/posts/${id}`}>
-                  <Image
-                    priority
-                    src={`/images/${thumb}`}
-                    height={230}
-                    width={280}
-                  />
-                </Link>
-                <small style={smallTime}>
-                  <Date dateString={date} />
-                </small>
-                <Link href={`/posts/${id}`}>
-                  <p>{title}</p>
-                </Link>
-              </div>
+              <Article list={list} />
             </li>
           ))}
         </ul>
