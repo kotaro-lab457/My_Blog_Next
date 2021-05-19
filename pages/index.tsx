@@ -7,7 +7,6 @@ import { getSortedPostsData } from "../lib/posts";
 import { GetStaticProps } from "next";
 import Link from "next/link";
 import Date from "../components/date";
-import { tags } from "./tags/[tag]";
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();
@@ -24,7 +23,6 @@ type Props = {
     title: string;
     date: string;
     thumb: string;
-    tag: string;
   }[];
 };
 
@@ -59,7 +57,7 @@ export default function Home({ allPostsData }: Props) {
         <h2>Blog Posts</h2>
         <section>
           <ul style={list}>
-            {allPostsData.map(({ id, date, title, thumb, tag }) => (
+            {allPostsData.map(({ id, date, title, thumb }) => (
               <li key={id} style={item}>
                 <div>
                   <Link href={`/posts/${id}`}>
@@ -77,7 +75,6 @@ export default function Home({ allPostsData }: Props) {
                     <p>{title}</p>
                   </Link>
                 </div>
-                <Link href={`tags/${tag}`}>タグ</Link>
               </li>
             ))}
           </ul>
