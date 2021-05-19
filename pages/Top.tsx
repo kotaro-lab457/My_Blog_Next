@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { makeStyles } from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
 import SnsIcons from "../components/icons/SnsIcons";
 
@@ -43,19 +42,16 @@ const image = {
   height: "100%",
 };
 
-const useStyles = makeStyles((theme) => ({
-  middle: {
-    width: theme.spacing(18),
-    height: theme.spacing(18),
-  },
-}));
+const avatar = {
+  width: "120px",
+  height: "120px",
+};
 
 const snsIcons: { [key: string]: string } = {
   textAlign: "right",
 };
 
 export const Top: React.FC = () => {
-  const classes = useStyles();
   return (
     <>
       <div style={background}>
@@ -67,7 +63,7 @@ export const Top: React.FC = () => {
       <div style={top}>
         <section style={topPage}>
           <div>
-            <Avatar className={classes.middle}>
+            <Avatar style={avatar}>
               <Image
                 priority
                 src="/images/profile.jpeg"

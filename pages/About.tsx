@@ -10,7 +10,6 @@ import { FaCode, FaUserCheck } from "react-icons/fa";
 import { BsCollectionPlayFill } from "react-icons/bs";
 import { FcEngineering } from "react-icons/fc";
 
-import { makeStyles } from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
 import SnsIcons from "../components/icons/SnsIcons";
 
@@ -51,15 +50,12 @@ const snsIcons = {
   margin: "0 0 1rem 1rem",
 };
 
-const useStyles = makeStyles((theme) => ({
-  middle: {
-    width: theme.spacing(18),
-    height: theme.spacing(18),
-  },
-}));
+const avatar = {
+  width: "120px",
+  height: "120px",
+};
 
 const About: React.FC = () => {
-  const classes = useStyles();
   return (
     <>
       <Layout>
@@ -78,7 +74,7 @@ const About: React.FC = () => {
               <h3>プロフィール</h3>
             </div>
             <div style={aboutMine}>
-              <Avatar className={classes.middle}>
+              <Avatar style={avatar}>
                 <Image
                   priority
                   src="/images/profile.jpeg"

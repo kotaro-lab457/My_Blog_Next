@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 
+import { AppBar, Toolbar, Tabs, Tab } from "@material-ui/core";
+
 import {
   AiOutlineHome,
   AiOutlineUser,
@@ -13,7 +15,7 @@ const header = {
   display: "flex",
   justifyContent: "space-between",
   width: "100%",
-  padding: "0 5rem",
+  padding: "10px 4rem",
 };
 
 const title = {
@@ -23,57 +25,39 @@ const title = {
 };
 
 const link = {
-  fontSize: "1.2rem",
+  fontSize: "1rem",
   color: "#000",
-  margin: "30px 20px 20px ",
-  display: "inline-block",
-};
-
-const linkIcon = {
-  paddingRight: "5px",
-  paddingTop: "5px",
-  display: "inline-block",
 };
 
 export const Header: React.FC = () => {
   return (
     <>
-      <header style={header}>
-        <h1 style={title}>Kotaro Blog</h1>
-        <div>
-          <Link href="/">
-            <a style={link}>
-              <span style={linkIcon}>
-                <AiOutlineHome />
-              </span>
-              Top
-            </a>
-          </Link>
-          <Link href="/About">
-            <a style={link}>
-              <span style={linkIcon}>
-                <AiOutlineUser />
-              </span>
-              About
-            </a>
-          </Link>
-          <Link href="/Blog">
-            <a style={link}>
-              <span style={linkIcon}>
-                <CgNotes />
-              </span>
-              Blog
-            </a>
-          </Link>
-          <Link href="/Work">
-            <a style={link}>
-              <span style={linkIcon}>
-                <AiOutlineCheckCircle />
-              </span>
-              Work
-            </a>
-          </Link>
-        </div>
+      <header>
+        <AppBar position="static" color="inherit">
+          <Toolbar>
+            <div style={header}>
+              <h1 style={title}>Kotaro Blog</h1>
+              <Tabs>
+                <Link href="/">
+                  <Tab label="Top" icon={<AiOutlineHome />} style={link} />
+                </Link>
+                <Link href="/About">
+                  <Tab label="About" icon={<AiOutlineUser />} style={link} />
+                </Link>
+                <Link href="/Blog">
+                  <Tab label="Blog" icon={<CgNotes />} style={link} />
+                </Link>
+                <Link href="/Work">
+                  <Tab
+                    label="Work"
+                    icon={<AiOutlineCheckCircle />}
+                    style={link}
+                  />
+                </Link>
+              </Tabs>
+            </div>
+          </Toolbar>
+        </AppBar>
       </header>
     </>
   );
