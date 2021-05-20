@@ -3,7 +3,7 @@ import Head from "next/head";
 
 import Layout, { TitleText } from "../components/layout";
 
-import Article from "../components/article";
+import Article from "../components/Article";
 
 import { getSortedPostsData } from "../lib/posts";
 import { GetStaticProps } from "next";

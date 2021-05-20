@@ -23,6 +23,10 @@ const blogTile = {
   padding: "0",
 };
 
+const blogTitle = {
+  margin: "5px 0",
+};
+
 const Article: React.FC<listProps> = (props) => {
   return (
     <>
@@ -38,8 +42,7 @@ const Article: React.FC<listProps> = (props) => {
             <small>
               <Date dateString={props.list.date} />
             </small>
-
-            <p>{props.list.title}</p>
+            <p style={blogTitle}>{props.list.title}</p>
           </div>
         </Paper>
       </Button>
