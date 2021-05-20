@@ -2,7 +2,7 @@ import Head from "next/head";
 
 import Layout, { siteTitle } from "../components/layout";
 import { Top } from "./Top";
-import Article from "../components/article";
+import Article from "../components/Article";
 import Qiita from "../components/Qiita";
 
 import { getSortedPostsData } from "../lib/posts";
@@ -18,7 +18,7 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const blogPage = {
-  width: "60vw",
+  width: "65vw",
   margin: "4rem auto",
   borderTop: "1px solid #000",
 };
