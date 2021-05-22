@@ -1,14 +1,13 @@
 import React from "react";
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 
 import Layout, { TitleText } from "../components/layout";
+import Qiita from "../components/Qiita";
+
+import { Article } from "../components/Article";
 
 import { getSortedPostsData } from "../lib/posts";
 import { GetStaticProps } from "next";
-
-import Date from "../components/date";
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();
@@ -19,18 +18,8 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-type Props = {
-  allPostsData: {
-    id: string;
-    title: string;
-    date: string;
-    thumb: string;
-  }[];
-};
-
 const blogPage = {
-  minHeight: "70vh",
-  width: "70vw",
+  width: "65vw",
   margin: "0 auto",
 };
 
@@ -40,48 +29,35 @@ const list = {
   cursor: "pointer",
 };
 
-const smallTime = {
-  display: "block",
-};
-
 const item = {
   width: "300px",
   margin: "20px",
 };
 
-const Blog = ({ allPostsData }: Props) => {
+const blogTitle = {
+  padding: "0 3rem",
+};
+
+const Blog = ({ allPostsData }) => {
   return (
     <Layout>
       <Head>
         <title>S.Kotaro next Blog</title>
       </Head>
       <TitleText>
-        <h1>Blog Posts</h1>
+        <h1>Blog</h1>
       </TitleText>
       <section style={blogPage}>
+        <h2 style={blogTitle}>Blog Posts</h2>
         <ul style={list}>
-          {allPostsData.map(({ id, date, title, thumb }) => (
+          {allPostsData.map((list, id) => (
             <li key={id} style={item}>
-              <div>
-                <Link href={`/posts/${id}`}>
-                  <Image
-                    priority
-                    src={`/images/${thumb}`}
-                    height={230}
-                    width={280}
-                  />
-                </Link>
-                <small style={smallTime}>
-                  <Date dateString={date} />
-                </small>
-                <Link href={`/posts/${id}`}>
-                  <p>{title}</p>
-                </Link>
-              </div>
+              <Article list={list} />
             </li>
           ))}
         </ul>
       </section>
+      <Qiita />
     </Layout>
   );
 };

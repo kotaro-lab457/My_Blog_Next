@@ -27,6 +27,7 @@ const title = {
 const link = {
   fontSize: "1rem",
   color: "#000",
+  minWidth: "100px",
 };
 
 export const Header: React.FC = () => {
