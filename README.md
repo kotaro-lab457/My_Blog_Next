@@ -8,7 +8,7 @@ PF 兼自分用ブログサイトを作成しました。プログラミング�
 
 下記のページにて、公開中です。
 
-- URL：[https://nextjs-kotaro-blog.vercel.app](https://nextjs-kotaro-blog.vercel.app)
+- URL：[https://nextjs-kotaro-blog-9stk13lmo-kotaro-lab457.vercel.app/](https://nextjs-kotaro-blog-9stk13lmo-kotaro-lab457.vercel.app/)
 
 ## 今後追加していく機能
 
