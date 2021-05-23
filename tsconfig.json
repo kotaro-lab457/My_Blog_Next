@@ -21,8 +21,8 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
-  ],
+    "**/*.tsx",
+     "components/date.js", "lib/posts.js"  ],
   "exclude": [
     "node_modules"
   ]

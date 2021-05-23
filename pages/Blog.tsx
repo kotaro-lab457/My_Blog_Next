@@ -1,9 +1,10 @@
+import React from "react";
 import Head from "next/head";
 
-import Layout, { siteTitle } from "../components/layout";
-import { Top } from "./Top";
-import { Article } from "../components/Article";
+import Layout, { TitleText } from "../components/layout";
 import Qiita from "../components/Qiita";
+
+import { Article } from "../components/Article";
 
 import { getSortedPostsData } from "../lib/posts";
 import { GetStaticProps } from "next";
@@ -19,12 +20,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const blogPage = {
   width: "65vw",
-  margin: "4rem auto",
-  borderTop: "1px solid #000",
-};
-
-const blogTitle = {
-  padding: "0 3rem",
+  margin: "0 auto",
 };
 
 const list = {
@@ -38,26 +34,32 @@ const item = {
   margin: "20px",
 };
 
-export default function Home({ allPostsData }) {
+const blogTitle = {
+  padding: "0 3rem",
+};
+
+const Blog = ({ allPostsData }) => {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle}</title>
+        <title>S.Kotaro next Blog</title>
       </Head>
-      <Top />
-      <div style={blogPage}>
+      <TitleText>
+        <h1>Blog</h1>
+      </TitleText>
+      <section style={blogPage}>
         <h2 style={blogTitle}>Blog Posts</h2>
-        <section>
-          <ul style={list}>
-            {allPostsData.map((list, id) => (
-              <li key={id} style={item}>
-                <Article list={list} />
-              </li>
-            ))}
-          </ul>
-        </section>
-      </div>
+        <ul style={list}>
+          {allPostsData.map((list, id) => (
+            <li key={id} style={item}>
+              <Article list={list} />
+            </li>
+          ))}
+        </ul>
+      </section>
       <Qiita />
     </Layout>
   );
-}
+};
+
+export default Blog;
