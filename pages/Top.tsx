@@ -51,7 +51,7 @@ const snsIcons: { [key: string]: string } = {
   textAlign: "right",
 };
 
-export const Top: React.FC = () => {
+const Top: React.FC = () => {
   return (
     <>
       <div style={background}>
@@ -93,3 +93,5 @@ export const Top: React.FC = () => {
     </>
   );
 };
+
+export default Top;
