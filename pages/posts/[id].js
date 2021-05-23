@@ -3,10 +3,9 @@ import Image from "next/image";
 import Layout from "../../components/layout";
 import Date from "../../components/date";
 import { getAllPostIds, getPostData } from "../../lib/posts";
-import { GetStaticPaths, GetStaticProps } from "next";
 
 // サーバーサイドを実行しているAPI
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths = async () => {
   const paths = getAllPostIds();
   return {
     paths,
@@ -15,7 +14,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 // サーバーサイドを実行しているAPI
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps = async ({ params }) => {
   const postData = await getPostData(params.id);
   return {
     props: {
@@ -25,14 +24,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 // 型宣言
-type props = {
-  postData: {
-    title: string;
-    date: string;
-    contentHtml: string;
-    thumb: string;
-  };
-};
+// type props = {
+//   postData: {
+//     title: string;
+//     date: string;
+//     contentHtml: string;
+//     thumb: string;
+//   };
+// };
 
 const textPages = {
   width: "45vw",
@@ -40,7 +39,7 @@ const textPages = {
 };
 
 // 外部データからデータを取得するDynamic Routesを使用
-const Post: React.FC<props> = ({ postData }) => {
+const Post = ({ postData }) => {
   return (
     <Layout>
       <Head>
