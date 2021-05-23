@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 
 import { AppBar, Toolbar, Tabs, Tab } from "@material-ui/core";
 
@@ -27,6 +26,8 @@ const title = {
 const link = {
   fontSize: "1rem",
   color: "#000",
+  minWidth: "100px",
+  width: "120px",
 };
 
 export const Header: React.FC = () => {
@@ -37,24 +38,32 @@ export const Header: React.FC = () => {
           <Toolbar>
             <div style={header}>
               <h1 style={title}>Kotaro Blog</h1>
-              <Tabs>
-                <Link href="/">
-                  <Tab label="Top" icon={<AiOutlineHome />} style={link} />
-                </Link>
-                <Link href="/About">
-                  <Tab label="About" icon={<AiOutlineUser />} style={link} />
-                </Link>
-                <Link href="/Blog">
-                  <Tab label="Blog" icon={<CgNotes />} style={link} />
-                </Link>
-                <Link href="/Work">
-                  <Tab
-                    label="Work"
-                    icon={<AiOutlineCheckCircle />}
-                    style={link}
-                  />
-                </Link>
-              </Tabs>
+              <div>
+                <Tab
+                  label="Top"
+                  icon={<AiOutlineHome />}
+                  style={link}
+                  href="/"
+                />
+                <Tab
+                  label="About"
+                  icon={<AiOutlineUser />}
+                  style={link}
+                  href="/About"
+                />
+                <Tab
+                  label="Blog"
+                  icon={<CgNotes />}
+                  style={link}
+                  href="/Blog"
+                />
+                <Tab
+                  label="Work"
+                  icon={<AiOutlineCheckCircle />}
+                  style={link}
+                  href="/Work"
+                />
+              </div>
             </div>
           </Toolbar>
         </AppBar>

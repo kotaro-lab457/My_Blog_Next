@@ -27,7 +27,7 @@ const blogTitle = {
   margin: "5px 0",
 };
 
-const Article: React.FC<listProps> = (props) => {
+export const Article: React.FC<listProps> = (props) => {
   return (
     <>
       <Button style={blogTile} href={`/posts/${props.list.id}`}>
@@ -49,5 +49,3 @@ const Article: React.FC<listProps> = (props) => {
     </>
   );
 };
-
-export default Article;

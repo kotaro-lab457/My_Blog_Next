@@ -2,7 +2,7 @@ import Head from "next/head";
 
 import Layout, { siteTitle } from "../components/layout";
 import { Top } from "./Top";
-import Article from "../components/Article";
+import { Article } from "../components/Article";
 import Qiita from "../components/Qiita";
 
 import { getSortedPostsData } from "../lib/posts";
@@ -57,10 +57,7 @@ export default function Home({ allPostsData }) {
           </ul>
         </section>
       </div>
-      <div style={blogPage}>
-        <h2 style={blogTitle}>Qiita</h2>
-        <Qiita />
-      </div>
+      <Qiita />
     </Layout>
   );
 }

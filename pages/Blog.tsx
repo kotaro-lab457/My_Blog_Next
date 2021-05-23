@@ -2,8 +2,9 @@ import React from "react";
 import Head from "next/head";
 
 import Layout, { TitleText } from "../components/layout";
+import Qiita from "../components/Qiita";
 
-import Article from "../components/Article";
+import { Article } from "../components/Article";
 
 import { getSortedPostsData } from "../lib/posts";
 import { GetStaticProps } from "next";
@@ -18,8 +19,7 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const blogPage = {
-  minHeight: "70vh",
-  width: "70vw",
+  width: "65vw",
   margin: "0 auto",
 };
 
@@ -34,6 +34,10 @@ const item = {
   margin: "20px",
 };
 
+const blogTitle = {
+  padding: "0 3rem",
+};
+
 const Blog = ({ allPostsData }) => {
   return (
     <Layout>
@@ -41,9 +45,10 @@ const Blog = ({ allPostsData }) => {
         <title>S.Kotaro next Blog</title>
       </Head>
       <TitleText>
-        <h1>Blog Posts</h1>
+        <h1>Blog</h1>
       </TitleText>
       <section style={blogPage}>
+        <h2 style={blogTitle}>Blog Posts</h2>
         <ul style={list}>
           {allPostsData.map((list, id) => (
             <li key={id} style={item}>
@@ -52,6 +57,7 @@ const Blog = ({ allPostsData }) => {
           ))}
         </ul>
       </section>
+      <Qiita />
     </Layout>
   );
 };
