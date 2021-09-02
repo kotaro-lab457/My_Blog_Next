@@ -40,7 +40,7 @@ const Work: React.FC = () => {
                   <p>読書アウトプットアプリ</p>
                   <Image
                     priority
-                    src="/images/portfolio_page.png"
+                    src="/images/read_out.jpeg"
                     width={600}
                     height={300}
                   />
@@ -59,7 +59,7 @@ const Work: React.FC = () => {
                   <p>チャットアプリ</p>
                   <Image
                     priority
-                    src="/images/team_codevillage.png"
+                    src="/images/team_codevillage.jpeg"
                     width={600}
                     height={300}
                   />
