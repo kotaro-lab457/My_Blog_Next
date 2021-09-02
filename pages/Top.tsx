@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 import Avatar from "@material-ui/core/Avatar";
 import SnsIcons from "../components/icons/SnsIcons";
@@ -16,7 +15,6 @@ const topPage = {
 };
 
 const top = {
-  // background: "#ebebeb",
   padding: "1rem 0",
 };
 
@@ -51,11 +49,11 @@ const snsIcons: { [key: string]: string } = {
   textAlign: "right",
 };
 
-export const Top: React.FC = () => {
+const Top: React.FC = () => {
   return (
     <>
       <div style={background}>
-        <img style={image} src={`/images/2021sky-bg.png`} alt="" />
+        <img style={image} src={`/images/2021sky-bg.jpeg`} alt="" />
       </div>
       <div style={titleTag}>
         <h2 style={titleName}>Kotaro Blog</h2>
@@ -66,7 +64,7 @@ export const Top: React.FC = () => {
             <Avatar style={avatar}>
               <Image
                 priority
-                src="/images/profile.jpeg"
+                src="/images/catcat.png"
                 height={144}
                 width={144}
               />
@@ -74,15 +72,9 @@ export const Top: React.FC = () => {
             <h2 style={myName}>Suzuki Kotaro</h2>
           </div>
           <div>
-            <p>現在、エンジニア転職を目指して転職活動中です！</p>
+            <p>現在、SES企業に勤めている新米エンジニアです。</p>
             <p>
-              フロントエンドを選考しており、React
-              ,TypeScriptを中心に学習しています。
-            </p>
-            <p>
-              ポートフォリオは
-              <Link href="/Portfolio">こちら</Link>
-              になります。
+              日々の学習や娯楽についてちょこちょこ発信。よろしくどうぞ。
             </p>
             <div style={snsIcons}>
               <SnsIcons />
@@ -93,3 +85,5 @@ export const Top: React.FC = () => {
     </>
   );
 };
+
+export default Top;

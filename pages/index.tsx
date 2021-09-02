@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 import Layout, { siteTitle } from "../components/layout";
-import { Top } from "./Top";
+import Top from "./Top";
 import { Article } from "../components/Article";
 import Qiita from "../components/Qiita";
 

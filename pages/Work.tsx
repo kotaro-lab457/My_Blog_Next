@@ -36,18 +36,18 @@ const Work: React.FC = () => {
             <Grid item xs={5}>
               <Paper elevation={3}>
                 <div style={workItem}>
-                  <h2 style={workItemTitle}>portfolio</h2>
+                  <h2 style={workItemTitle}>Read Out</h2>
                   <p>読書アウトプットアプリ</p>
                   <Image
                     priority
-                    src="/images/portfolio_page.png"
+                    src="/images/read_out.jpeg"
                     width={600}
                     height={300}
                   />
-                  <p>転職活動用のポートフォリオ</p>
+                  <p>読書した内容をアウトプット＆共有するアプリ</p>
                   <p>
                     詳細については
-                    <Link href="/Portfolio">こちら</Link>
+                    <Link href="/ReadApp">こちら</Link>
                   </p>
                 </div>
               </Paper>
@@ -56,15 +56,15 @@ const Work: React.FC = () => {
               <Paper elevation={3}>
                 <div style={workItem}>
                   <h2 style={workItemTitle}>共同開発</h2>
-                  <p>チャットアプリ</p>
+                  <p>チャットアプリ。</p>
                   <Image
                     priority
-                    src="/images/team_codevillage.png"
+                    src="/images/team_codevillage.jpeg"
                     width={600}
                     height={300}
                   />
                   <p>共同開発の制作アプリ／Githubを使用した共同開発</p>
-                  <p>※リンクはありません</p>
+                  <p>※リンクはありません。</p>
                 </div>
               </Paper>
             </Grid>
