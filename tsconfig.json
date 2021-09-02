@@ -25,6 +25,9 @@
       "@Pages/*": [
         "pages/*"
       ],
+      "@Modules": [
+        "modules/md.module.ts",
+      ],
     }
   },
   "include": [
