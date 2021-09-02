@@ -8,7 +8,6 @@ import { AiFillFileText } from "react-icons/ai";
 import { BiWorld } from "react-icons/bi";
 import { FaCode, FaUserCheck } from "react-icons/fa";
 import { BsCollectionPlayFill } from "react-icons/bs";
-import { FcEngineering } from "react-icons/fc";
 
 import Avatar from "@material-ui/core/Avatar";
 import SnsIcons from "../components/icons/SnsIcons";
@@ -77,7 +76,7 @@ const About: React.FC = () => {
               <Avatar style={avatar}>
                 <Image
                   priority
-                  src="/images/profile.jpeg"
+                  src="/images/catcat.png"
                   height={144}
                   width={144}
                 />
@@ -133,8 +132,8 @@ const About: React.FC = () => {
                   <p>HTML5 / CSS3(Scss) / JavaScript / TypeScript</p>
                 </li>
                 <li>
-                  <p>フレームワーク</p>
-                  <p>React / Redux / Redux Toolkit / Next.js / webpack</p>
+                  <p>フレームワーク・ライブラリ</p>
+                  <p>jQuery / React / Redux(Redux Toolkit) / Vue / Vuex / Next.js / webpack</p>
                 </li>
                 <li>
                   <p>その他技術</p>
@@ -144,23 +143,6 @@ const About: React.FC = () => {
                   </p>
                 </li>
               </ul>
-            </div>
-            <div>
-              <div style={textTitle}>
-                <span style={textIcon}>
-                  <FcEngineering />
-                </span>
-                <h3>エンジニアとしての一つの目標</h3>
-              </div>
-              <p>
-                僕は本番に緊張したり、不安を抱え込みやすくていろいろ余計なことを考えてしまい心配性な一面があります。
-                <br />
-                そんな時に、マインドフルネス瞑想や筋トレを行い、自分としっかり向き合うことで思考が整理され行動に自信がつき新しい体験や行動力に繋がりました。
-                <br />
-                <br />
-                人生を大きく変えてくれた瞑想や筋トレをITサービスで不安症や精神的に弱い人たちの気持ちを少しでも改善し、より良い人生に変わるようなサービスを提供することで
-                一人でも多くの方に使っていただきたいという目標があります。
-              </p>
             </div>
           </div>
         </div>
