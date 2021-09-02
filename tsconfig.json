@@ -22,7 +22,7 @@
       "@Components/*": [
         "components/*"
       ],
-      "@Page/*": [
+      "@Pages/*": [
         "pages/*"
       ],
     }
