@@ -4,15 +4,7 @@ import Image from "next/image";
 import Date from "./date";
 
 import { Paper, Button } from "@material-ui/core";
-
-interface listProps {
-  list: {
-    title: string;
-    id: string;
-    thumb: string;
-    date: string;
-  };
-}
+import { listProps } from "@Modules"
 
 const blogText: { [key: string]: string } = {
   textAlign: "left",
@@ -27,7 +19,7 @@ const blogTitle = {
   margin: "5px 0",
 };
 
-export const Article: React.FC<listProps> = (props) => {
+const Article: React.FC<listProps> = (props) => {
   return (
     <>
       <Button style={blogTile} href={`/posts/${props.list.id}`}>
@@ -49,3 +41,5 @@ export const Article: React.FC<listProps> = (props) => {
     </>
   );
 };
+
+export default Article

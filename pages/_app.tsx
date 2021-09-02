@@ -8,7 +8,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   React.useEffect(() => {
     // Remove the server-side injected CSS.
-    const jssStyles = document.querySelector("#jss-server-side");
+    const jssStyles:any = document.querySelector("#jss-server-side");
     if (jssStyles) {
       jssStyles.parentElement.removeChild(jssStyles);
     }
