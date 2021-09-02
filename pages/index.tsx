@@ -38,7 +38,7 @@ const item = {
   margin: "20px",
 };
 
-export default function Home({ allPostsData }) {
+export default function Home({ allPostsData }: any) {
   return (
     <Layout>
       <Head>
@@ -49,7 +49,7 @@ export default function Home({ allPostsData }) {
         <h2 style={blogTitle}>Blog Posts</h2>
         <section>
           <ul style={list}>
-            {allPostsData.map((list, id) => (
+            {allPostsData.map((list:any, id:number) => (
               <li key={id} style={item}>
                 <Article list={list} />
               </li>
