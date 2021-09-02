@@ -1,15 +1,16 @@
 import Head from "next/head";
-
-import Layout, { siteTitle } from "../components/layout";
-import Top from "./Top";
-import { Article } from "../components/Article";
-import Qiita from "../components/Qiita";
-
-import { getSortedPostsData } from "../lib/posts";
 import { GetStaticProps } from "next";
 
+import Layout, { siteTitle } from "@Components/layout";
+import Top from "@Pages/Top";
+import Article from "@Components/Article";
+import Qiita from "@Components/Qiita";
+
+import { getSortedPostsData } from "../lib/posts";
+import { List } from "@Modules"
+
 export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = await getSortedPostsData();
   return {
     props: {
       allPostsData,
@@ -38,7 +39,7 @@ const item = {
   margin: "20px",
 };
 
-export default function Home({ allPostsData }) {
+export default function Home({ allPostsData }: any) {
   return (
     <Layout>
       <Head>
@@ -49,7 +50,7 @@ export default function Home({ allPostsData }) {
         <h2 style={blogTitle}>Blog Posts</h2>
         <section>
           <ul style={list}>
-            {allPostsData.map((list, id) => (
+            {allPostsData.map((list:List, id:number) => (
               <li key={id} style={item}>
                 <Article list={list} />
               </li>
