@@ -35,7 +35,7 @@ const blogTitle = {
   padding: "0 3rem",
 };
 
-const Qiita: React.FC = () => {
+const Article: React.FC = () => {
   return (
     <>
       <div style={blogPage}>
@@ -169,4 +169,4 @@ const Qiita: React.FC = () => {
   );
 };
 
-export default Qiita;
+export default Article;
