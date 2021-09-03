@@ -2,11 +2,11 @@ import Head from "next/head";
 import { GetStaticProps } from "next";
 
 import Layout, { siteTitle } from "@Components/layout";
-import Top from "@Pages/Top";
+import Top from "./Top";
 import Article from "@Components/Article";
 import Qiita from "@Components/Qiita";
 
-import { getSortedPostsData } from "../lib/posts";
+import { getSortedPostsData } from "@Lib/posts";
 import { List } from "@Modules"
 
 export const getStaticProps: GetStaticProps = async () => {

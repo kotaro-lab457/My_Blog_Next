@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 import Avatar from "@material-ui/core/Avatar";
-import SnsIcons from "../components/icons/SnsIcons";
+import SnsIcons from "@Components/SnsIcons";
 
 const myName = {
   fontFamily: "Courier New",

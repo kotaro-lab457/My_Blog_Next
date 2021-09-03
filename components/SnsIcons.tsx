@@ -1,8 +1,5 @@
 import React from "react";
-import Link from "next/link";
-
 import { FaTwitter, FaGithub, FaWikipediaW } from "react-icons/fa";
-
 import { IconButton } from "@material-ui/core";
 
 const iconTwitter = {
