@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
-import Layout from "@Components/layout";
+import Layout from "@Components/Layout";
 
 const portfolio = {
   width: "60vw",

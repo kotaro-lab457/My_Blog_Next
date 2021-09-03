@@ -1,9 +1,9 @@
 import Head from "next/head";
 import { GetStaticProps } from "next";
 
-import Layout, { siteTitle } from "@Components/layout";
+import Layout, { siteTitle } from "@Components/Layout";
 import Top from "./Top";
-import Article from "@Components/Article";
+import Thumb from "@Components/Thumb";
 import Qiita from "@Components/Qiita";
 
 import { getSortedPostsData } from "@Lib/posts";
@@ -52,7 +52,7 @@ export default function Home({ allPostsData }: any) {
           <ul style={list}>
             {allPostsData.map((list:List, id:number) => (
               <li key={id} style={item}>
-                <Article list={list} />
+                <Thumb list={list} />
               </li>
             ))}
           </ul>

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import Layout from "@Components/layout";
-import Date from "@Components/date";
+import Layout from "@Components/Layout";
+import Date from "@Components/Time";
 import { getAllPostIds, getPostData } from "@Lib/posts";
 
 // サーバーサイドを実行しているAPI

@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Head from "next/head";
 
-import Layout, { siteTitle, TitleText } from "@Components/layout";
+import Layout, { siteTitle, TitleText } from "@Components/Layout";
 
 import { AiFillFileText } from "react-icons/ai";
 import { BiWorld } from "react-icons/bi";
