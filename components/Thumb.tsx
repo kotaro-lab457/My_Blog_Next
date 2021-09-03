@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import Date from "./date";
+import Date from "./Time";
 
 import { Paper, Button } from "@material-ui/core";
 import { listProps } from "@Modules"
@@ -19,7 +19,7 @@ const blogTitle = {
   margin: "5px 0",
 };
 
-const Article: React.FC<listProps> = (props) => {
+const Thumb: React.FC<listProps> = (props) => {
   return (
     <>
       <Button style={blogTile} href={`/posts/${props.list.id}`}>
@@ -42,4 +42,4 @@ const Article: React.FC<listProps> = (props) => {
   );
 };
 
-export default Article
+export default Thumb;

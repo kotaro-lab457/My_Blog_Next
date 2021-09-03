@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
 
-import Layout, { TitleText } from "@Components/layout";
+import Layout, { TitleText } from "@Components/Layout";
 
 import { Grid, Paper } from "@material-ui/core";
 

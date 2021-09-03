@@ -2,10 +2,10 @@ import React from "react";
 import Head from "next/head";
 import { GetStaticProps } from "next";
 
-import Layout, { TitleText } from "../components/layout";
+import Layout, { TitleText } from "@Components/Layout";
 import Qiita from "@Components/Qiita";
 
-import Article from "@Components/Article";
+import Thumb from "@Components/Thumb";
 
 import { getSortedPostsData } from "../lib/posts";
 import { List } from "@Modules"
@@ -53,7 +53,7 @@ const Blog = ({ allPostsData }: any) => {
         <ul style={list}>
           {allPostsData.map((list:List, id:number) => (
             <li key={id} style={item}>
-              <Article list={list} />
+              <Thumb list={list} />
             </li>
           ))}
         </ul>

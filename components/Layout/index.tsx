@@ -1,7 +1,7 @@
 import Head from "next/head";
 
-import  Footer  from "./common/Footer";
-import  Header  from "./common/Header";
+import  Footer  from "./Footer";
+import  Header  from "./Header";
 
 export const siteTitle = "S.Kotaro Blog Web";
 
@@ -22,7 +22,7 @@ export const TitleText: React.FC = ({ children }) => {
   return <div style={titlePage}>{children}</div>;
 };
 
-export const Layout: React.FC = ({ children }) => {
+const Layout: React.FC = ({ children }) => {
   return (
     <>
       <Head>
