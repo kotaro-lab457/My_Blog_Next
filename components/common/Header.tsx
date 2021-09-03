@@ -1,6 +1,6 @@
 import React from "react";
 
-import { AppBar, Toolbar, Tabs, Tab } from "@material-ui/core";
+import { AppBar, Toolbar, Tab } from "@material-ui/core";
 
 import {
   AiOutlineHome,
@@ -30,7 +30,7 @@ const link = {
   width: "120px",
 };
 
-export const Header: React.FC = () => {
+const Header: React.FC = () => {
   return (
     <>
       <header>
@@ -71,3 +71,5 @@ export const Header: React.FC = () => {
     </>
   );
 };
+
+export default Header;

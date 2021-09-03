@@ -3,9 +3,9 @@ import Head from "next/head";
 import { GetStaticProps } from "next";
 
 import Layout, { TitleText } from "../components/layout";
-import Qiita from "../components/Qiita";
+import Qiita from "@Components/Qiita";
 
-import Article from "../components/Article";
+import Article from "@Components/Article";
 
 import { getSortedPostsData } from "../lib/posts";
 import { List } from "@Modules"

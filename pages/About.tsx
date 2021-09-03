@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Head from "next/head";
 
-import Layout, { siteTitle, TitleText } from "../components/layout";
+import Layout, { siteTitle, TitleText } from "@Components/layout";
 
 import { AiFillFileText } from "react-icons/ai";
 import { BiWorld } from "react-icons/bi";
@@ -10,7 +10,7 @@ import { FaCode, FaUserCheck } from "react-icons/fa";
 import { BsCollectionPlayFill } from "react-icons/bs";
 
 import Avatar from "@material-ui/core/Avatar";
-import SnsIcons from "../components/icons/SnsIcons";
+import SnsIcons from "@Components/SnsIcons";
 
 const about = {
   width: "50vw",

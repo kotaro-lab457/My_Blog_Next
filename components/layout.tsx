@@ -1,7 +1,7 @@
 import Head from "next/head";
 
-import { Footer } from "./common/Footer";
-import { Header } from "./common/Header";
+import  Footer  from "./common/Footer";
+import  Header  from "./common/Header";
 
 export const siteTitle = "S.Kotaro Blog Web";
 
