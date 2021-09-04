@@ -39,7 +39,7 @@
     "**/*.tsx",
     "components/Time.tsx",
     "lib/posts.js",
-    "pages/posts/[id].tsx",
+    "pages/posts/[blog].tsx",
   ],
   "exclude": [
     "node_modules"
