@@ -3,6 +3,7 @@ export interface List {
   paths: string;
   thumb: string;
   date: string;
+  category: string;
 }
 
 export interface listProps {
