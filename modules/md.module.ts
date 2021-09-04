@@ -1,8 +1,9 @@
 export interface List {
   title: string;
-  id: string;
+  paths: string;
   thumb: string;
   date: string;
+  category: string;
 }
 
 export interface listProps {

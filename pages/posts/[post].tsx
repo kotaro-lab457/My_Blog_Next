@@ -15,7 +15,7 @@ export const getStaticPaths = async () => {
 
 // サーバーサイドを実行しているAPI
 export const getStaticProps = async ({ params } :any ) => {
-  const postData = await getPostData(params.id);
+  const postData = await getPostData(params.post);
   return {
     props: {
       postData,

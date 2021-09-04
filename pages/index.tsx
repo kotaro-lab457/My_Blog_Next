@@ -4,7 +4,7 @@ import { GetStaticProps } from "next";
 import Layout, { siteTitle } from "@Components/Layout";
 import Top from "./Top";
 import Thumb from "@Components/Thumb";
-import Qiita from "@Components/Qiita";
+import Article from "@Components/Article";
 
 import { getSortedPostsData } from "@Lib/posts";
 import { List } from "@Modules"
@@ -58,7 +58,7 @@ export default function Home({ allPostsData }: any) {
           </ul>
         </section>
       </div>
-      <Qiita />
+      <Article />
     </Layout>
   );
 }

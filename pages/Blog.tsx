@@ -3,7 +3,7 @@ import Head from "next/head";
 import { GetStaticProps } from "next";
 
 import Layout, { TitleText } from "@Components/Layout";
-import Qiita from "@Components/Qiita";
+import Article from "@Components/Article";
 
 import Thumb from "@Components/Thumb";
 
@@ -58,7 +58,7 @@ const Blog = ({ allPostsData }: any) => {
           ))}
         </ul>
       </section>
-      <Qiita />
+      <Article />
     </Layout>
   );
 };
