@@ -38,7 +38,7 @@
     "**/*.ts",
     "**/*.tsx",
     "components/Time.tsx",
-    "lib/posts.js",
+    "lib/posts.ts",
     "pages/posts/[blog].tsx",
   ],
   "exclude": [
