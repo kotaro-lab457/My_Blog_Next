@@ -22,7 +22,7 @@ const blogTitle = {
 const Thumb: React.FC<listProps> = (props) => {
   return (
     <>
-      <Button style={blogTile} href={`/posts/${props.list.id}`}>
+      <Button style={blogTile} href={`/posts/${props.list.paths}`}>
         <Paper elevation={3}>
           <Image
             priority

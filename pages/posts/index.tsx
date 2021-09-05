@@ -3,7 +3,7 @@ import { GetStaticProps } from "next";
 import Thumb from "@Components/Thumb";
 
 import { getSortedPostsData } from "@Lib/posts";
-import { List } from "@Modules"
+import { allPostsData, List } from "@Modules";
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();
@@ -36,9 +36,8 @@ const item = {
   margin: "20px",
 };
 
-export default function Posts({ allPostsData}: {allPostsData: {date: string, title: string, paths:string, thumb:string}}) {
+export default function Posts({ allPostsData}: {allPostsData: allPostsData}) {
   const data: any = allPostsData;
-  // console.log("posts コンポーネント", data);
   return (
     <>
       <div style={blogPage}>

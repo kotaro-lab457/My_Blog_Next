@@ -6,7 +6,7 @@ import Top from "./Top";
 import Article from "@Components/Article";
 
 import { getSortedPostsData } from "@Lib/posts";
-import { List } from "@Modules"
+import { allPostsData } from "@Modules"
 
 import Posts from "./posts/index";
 
@@ -20,8 +20,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-export default function Home({ allPostsData }: any) {
-  // console.log("home",getSortedPostsData());
+export default function Home({ allPostsData }: {allPostsData: allPostsData}) {
   return (
     <Layout>
       <Head>

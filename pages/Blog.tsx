@@ -9,7 +9,7 @@ import Thumb from "@Components/Thumb";
 import Posts from "./posts/index";
 
 import { getSortedPostsData } from "@Lib/posts";
-import { List } from "@Modules"
+import { allPostsData } from "@Modules"
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();
@@ -20,7 +20,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const Blog = ({ allPostsData }: any) => {
+const Blog = ({ allPostsData }: { allPostsData: allPostsData }) => {
   return (
     <Layout>
       <Head>
