@@ -8,34 +8,36 @@ import html from "remark-html";
 const articleDirectory = path.join(process.cwd(), "articles");
 
 // マークダウンファイルの読み込み（TOPページ）
-export function getSortedPostsData() {
+export function getSortedPostsData():any{
   // fs.readFileSync(ファイルのパス、文字こーど、コールバック関数)
+
   const fileNames = fs.readdirSync(articleDirectory);
-  const allPostsData = fileNames.map((fileName) => {
-    // IDを取得するには、ファイル名から「.md」を削除してください
-    const paths = fileName.replace(/\.md$/, "");
-
-    // マークダウンファイルを文字列として読み取る
-    const fullPath = path.join(articleDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-
-    // matterを使用して投稿メタデータセクションを解析します
-    const matterResult = matter(fileContents);
-
-    // Combine the data with the id
-    return {
-      paths,
-      ...matterResult.data,
-    };
-  });
-  // 日付順にする。
-  return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
-      return 1;
-    } else {
-      return -1;
-    }
-  });
+    const allPostsData = fileNames.map((fileName) => {
+      // IDを取得するには、ファイル名から「.md」を削除してください
+      const paths = fileName.replace(/\.md$/, '');
+      
+      // マークダウンファイルを文字列として読み取る
+      const fullPath = path.join(articleDirectory, fileName);
+      const fileContents = fs.readFileSync(fullPath, 'utf8');
+      
+      // matterを使用して投稿メタデータセクションを解析します
+      const matterResult = matter(fileContents);
+      // Combine the data with the id
+      return {
+        paths,
+        ...(matterResult.data as { date: string; title: string; thumb: string;}),
+      };
+    });
+    // 日付順にする。
+    // console.log("サーバー",allPostsData);
+    
+    return allPostsData.sort((a, b) => {
+      if (a.date < b.date) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
 }
 
 // ブログページのマークダウン
@@ -51,7 +53,7 @@ export function getAllPostIds() {
 }
 
 // ブログリストの参照
-export async function getPostData(id) {
+export async function getPostData(id:string) {
   const fullPath = path.join(articleDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
