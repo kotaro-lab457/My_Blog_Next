@@ -1,6 +1,10 @@
 import { parseISO, format } from "date-fns";
+import { NextPage } from "next";
 
-export default function Date({ dateString }: any) {
+const Date: NextPage<{ dateString: string }> = ({ dateString }:{dateString:string}) => {
   const date = parseISO(dateString);
-  return <time dateTime={dateString}>{format(date, "LLLL d, yyyy")}</time>;
-}
+  const days = format(date, "LLLL d, yyyy");
+  return <time dateTime={dateString}>{days}</time>;
+};
+
+export default Date;

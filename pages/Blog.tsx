@@ -6,8 +6,9 @@ import Layout, { TitleText } from "@Components/Layout";
 import Article from "@Components/Article";
 
 import Thumb from "@Components/Thumb";
+import Posts from "./posts/index";
 
-import { getSortedPostsData } from "../lib/posts";
+import { getSortedPostsData } from "@Lib/posts";
 import { List } from "@Modules"
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -19,26 +20,6 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const blogPage = {
-  width: "65vw",
-  margin: "0 auto",
-};
-
-const list = {
-  listStyle: "none",
-  display: "flex",
-  cursor: "pointer",
-};
-
-const item = {
-  width: "300px",
-  margin: "20px",
-};
-
-const blogTitle = {
-  padding: "0 3rem",
-};
-
 const Blog = ({ allPostsData }: any) => {
   return (
     <Layout>
@@ -48,16 +29,7 @@ const Blog = ({ allPostsData }: any) => {
       <TitleText>
         <h1>Blog</h1>
       </TitleText>
-      <section style={blogPage}>
-        <h2 style={blogTitle}>Blog Posts</h2>
-        <ul style={list}>
-          {allPostsData.map((list:List, id:number) => (
-            <li key={id} style={item}>
-              <Thumb list={list} />
-            </li>
-          ))}
-        </ul>
-      </section>
+      <Posts allPostsData={allPostsData} />
       <Article />
     </Layout>
   );
