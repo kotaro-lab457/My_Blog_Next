@@ -3,6 +3,7 @@ import Image from "next/image";
 import Layout from "@Components/Layout";
 import Date from "@Components/Time";
 import { getAllPostIds, getPostData } from "@Lib/posts";
+import { postData,params } from "@Modules";
 
 // サーバーサイドを実行しているAPI
 export const getStaticPaths = async () => {
@@ -14,7 +15,7 @@ export const getStaticPaths = async () => {
 };
 
 // サーバーサイドを実行しているAPI
-export const getStaticProps = async ({ params } :any ) => {
+export const getStaticProps = async ({ params }: params) => {
   const postData = await getPostData(params.post);
   return {
     props: {
@@ -29,7 +30,7 @@ const textPages = {
 };
 
 // 外部データからデータを取得するDynamic Routesを使用
-const Post: React.FC = ({ postData }: any ) => {
+const Post: React.FC<{postData: postData}> = ({ postData }: { postData: postData } ) => {
   return (
     <Layout>
       <Head>
@@ -46,7 +47,9 @@ const Post: React.FC = ({ postData }: any ) => {
         <div>
           <Date dateString={postData.date} />
         </div>
-        {/* dangerouslySetInnerHTMLはオブジェクトを渡すことで表示ができる。 */}
+        <div>
+          <p>{postData.category}</p>
+        </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
     </Layout>
