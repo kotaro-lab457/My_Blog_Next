@@ -3,14 +3,14 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
-import Layout from "../components/layout";
+import Layout from "@Components/Layout";
 
 const portfolio = {
   width: "60vw",
   margin: "2rem auto",
 };
 
-const Portfolio = () => {
+const ReadApp = () => {
   return (
     <>
       <Head>
@@ -23,7 +23,7 @@ const Portfolio = () => {
           <div>
             <Image
               priority
-              src="/images/portfolio_page.png"
+              src="/images/read_out.jpeg"
               width={1000}
               height={500}
             />
@@ -31,16 +31,13 @@ const Portfolio = () => {
           <div>
             <p>
               Github：
-              <Link href="https://github.com/kotaro-lab457/MyPortfolio">
+              <Link href="https://github.com/kotaro-lab457/ReadOut">
                 ソースコード
               </Link>
             </p>
             <p>
               Qiita解説記事は
-              <Link
-                href="https://qiita.com/s_taro/items/bb607598d8eb45c70d39
-            "
-              >
+              <Link href="https://qiita.com/s_taro/items/bb607598d8eb45c70d39">
                 こちら
               </Link>
             </p>
@@ -52,14 +49,11 @@ const Portfolio = () => {
             </p>
             <p>主な使用技術</p>
             <p>
-              TypeScript / React / Redux / Atomic Design / Firebase / Google
-              Books API
+              TypeScript / React / Redux / Atomic Design / Firebase / Google Books API
             </p>
             <p>工夫した点</p>
             <ul>
-              <li>
-                Chart.jsを使用し、日付に応じて投稿した数をグラフ化し毎日の読書量をフィードバック
-              </li>
+              <li>Chart.jsを使用し、日付に応じて投稿した数をグラフ化し毎日の読書量をフィードバック</li>
               <li>Firebaseでデータの保存・取得・編集・削除機能を実装</li>
               <li>投稿時に読んだタイトルに合わせた本の画像を表示</li>
             </ul>
@@ -70,4 +64,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default ReadApp;

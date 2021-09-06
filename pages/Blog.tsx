@@ -1,13 +1,15 @@
 import React from "react";
 import Head from "next/head";
-
-import Layout, { TitleText } from "../components/layout";
-import Qiita from "../components/Qiita";
-
-import { Article } from "../components/Article";
-
-import { getSortedPostsData } from "../lib/posts";
 import { GetStaticProps } from "next";
+
+import Layout, { TitleText } from "@Components/Layout";
+import Article from "@Components/Article";
+
+import Thumb from "@Components/Thumb";
+import Posts from "./posts/index";
+
+import { getSortedPostsData } from "@Lib/posts";
+import { allPostsData } from "@Modules"
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();
@@ -18,27 +20,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const blogPage = {
-  width: "65vw",
-  margin: "0 auto",
-};
-
-const list = {
-  listStyle: "none",
-  display: "flex",
-  cursor: "pointer",
-};
-
-const item = {
-  width: "300px",
-  margin: "20px",
-};
-
-const blogTitle = {
-  padding: "0 3rem",
-};
-
-const Blog = ({ allPostsData }) => {
+const Blog = ({ allPostsData }: { allPostsData: allPostsData }) => {
   return (
     <Layout>
       <Head>
@@ -47,17 +29,8 @@ const Blog = ({ allPostsData }) => {
       <TitleText>
         <h1>Blog</h1>
       </TitleText>
-      <section style={blogPage}>
-        <h2 style={blogTitle}>Blog Posts</h2>
-        <ul style={list}>
-          {allPostsData.map((list, id) => (
-            <li key={id} style={item}>
-              <Article list={list} />
-            </li>
-          ))}
-        </ul>
-      </section>
-      <Qiita />
+      <Posts allPostsData={allPostsData} />
+      <Article />
     </Layout>
   );
 };

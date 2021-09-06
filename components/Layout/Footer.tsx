@@ -10,10 +10,12 @@ const writeFont = {
   color: "#fff",
 };
 
-export const Footer: React.FC = () => {
+const Footer: React.FC = () => {
   return (
     <footer style={footer}>
       <p style={writeFont}>copylighting kotaro-suzuki</p>
     </footer>
   );
 };
+
+export default Footer;
