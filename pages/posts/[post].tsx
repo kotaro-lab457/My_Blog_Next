@@ -3,7 +3,7 @@ import Image from "next/image";
 import Layout from "@Components/Layout";
 import Date from "@Components/Time";
 import { getAllPostIds, getPostData } from "@Lib/posts";
-import { postData,params } from "@Modules";
+import { postData, params } from "@Modules";
 
 // サーバーサイドを実行しているAPI
 export const getStaticPaths = async () => {
@@ -48,7 +48,7 @@ const Post: React.FC<{postData: postData}> = ({ postData }: { postData: postData
           <Date dateString={postData.date} />
         </div>
         <div>
-          <p>{postData.category}</p>
+          <p>カテゴリー：{postData.category}</p>
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>

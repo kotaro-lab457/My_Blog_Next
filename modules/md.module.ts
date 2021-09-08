@@ -34,3 +34,10 @@ export type postData = {
   category: string,
   contentHtml: string,
 }
+
+export interface matterResult {
+  title: string;
+  thumb: string;
+  date: string;
+  category: string;
+}
