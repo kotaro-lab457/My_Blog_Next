@@ -8,7 +8,7 @@ import Article from "@Components/Article";
 import { getSortedPostsData } from "@Lib/posts";
 import { allPostsData } from "@Modules"
 
-import Posts from "./posts/index";
+import Posts from "@Pages/posts";
 
 
 export const getStaticProps: GetStaticProps = async () => {
