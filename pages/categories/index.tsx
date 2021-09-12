@@ -6,6 +6,8 @@ import CategoryList from "@Components/CategoryList";
 
 import { getFilterCategoryData } from "@Lib/categories";
 
+import { categoryData } from "@Modules";
+
 export const getStaticProps: GetStaticProps = async () => {
   const categories = await getFilterCategoryData();
   return {
@@ -15,8 +17,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const Categories = ({ categories }: any) => {
-  console.log(categories);
+const Categories = ({ categories }: categoryData) => {
   return (
     <Layout>
       <Head>
@@ -26,7 +27,7 @@ const Categories = ({ categories }: any) => {
         <h2>カテゴリー</h2>
         <section>
           <ul>
-            {categories.map((category: any, id:number) => (
+            {categories.map((category: string, id:number) => (
               <li key={id}>
                 <CategoryList category={category} />
               </li>

@@ -24,7 +24,6 @@ export function getAllCategoryIds() {
 // カテゴリーページ（一覧表示：/categories）
 export async function getFilterCategoryData() {
   const allCategoriesData = getSortedPostsData();
-  console.log(allCategoriesData.filter(data => data.category === "JavaScript"))
   const categoryList = allCategoriesData.map(list => list.category);
 
   const categories = [...new Set(categoryList)];
