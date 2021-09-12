@@ -15,8 +15,13 @@ const blogTile = {
   padding: "0",
 };
 
-const blogTitle = {
+const blogTitle: { [key: string]: string } = {
   margin: "5px 0",
+  textTransform: "none",
+};
+
+const initText: { [key: string]: string } = {
+  textTransform: "none",
 };
 
 const Thumb: React.FC<listProps> = (props) => {
@@ -31,9 +36,10 @@ const Thumb: React.FC<listProps> = (props) => {
             width={300}
           />
           <div style={blogText}>
-            <small>
+            <small style={initText}>
               <Date dateString={props.list.date} />
             </small>
+            <p style={blogTitle}>{props.list.category}</p>
             <p style={blogTitle}>{props.list.title}</p>
           </div>
         </Paper>

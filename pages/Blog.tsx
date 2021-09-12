@@ -5,8 +5,7 @@ import { GetStaticProps } from "next";
 import Layout, { TitleText } from "@Components/Layout";
 import Article from "@Components/Article";
 
-import Thumb from "@Components/Thumb";
-import Posts from "./posts/index";
+import Posts from "@Pages/posts";
 
 import { getSortedPostsData } from "@Lib/posts";
 import { allPostsData } from "@Modules"

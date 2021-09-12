@@ -26,7 +26,6 @@ const blogTitle = {
 };
 
 const list = {
-  listStyle: "none",
   display: "flex",
   cursor: "pointer",
 };
@@ -36,7 +35,7 @@ const item = {
   margin: "20px",
 };
 
-export default function Posts({ allPostsData}: {allPostsData: allPostsData}) {
+export default function Posts({ allPostsData }: { allPostsData: allPostsData }) {
   const data: any = allPostsData;
   return (
     <>
