@@ -10,13 +10,23 @@ export interface listProps {
   list: List;
 }
 
-export type params = {
+export type postParams = {
   params: {
     post: string,
   }
 }
 
-export type allPostsData = {
+export type categoryParams = {
+  params: {
+    category: string,
+  }
+}
+
+export type categoryData = {
+  categories: string[],
+}
+
+export type postsData = {
   date: string,
   title: string,
   paths: string,
@@ -25,7 +35,7 @@ export type allPostsData = {
   tag: [
     string,
   ]
-}
+}[]
 
 export type postData = {
   title: string,
