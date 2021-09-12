@@ -5,17 +5,17 @@ import Date from "@Components/Time";
 import { getAllPostIds, getPostData } from "@Lib/posts";
 import { postData, params } from "@Modules";
 
-// サーバーサイドを実行しているAPI
+// 事前生成するページのパス（URLのパラメータ）を返す。
 export const getStaticPaths = async () => {
   const paths = getAllPostIds();
   return {
-    paths,
+    paths, // 生成するページのパス
     fallback: false,
   };
 };
 
 // サーバーサイドを実行しているAPI
-export const getStaticProps = async ({ params }: params) => {
+export const getStaticProps = async ({ params }: any) => {
   const postData = await getPostData(params.post);
   return {
     props: {

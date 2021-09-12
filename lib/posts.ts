@@ -39,7 +39,7 @@ export function getSortedPostsData(){
   });
 }
 
-// ブログページのマークダウン
+// ブログページのパラメータ
 export function getAllPostIds() {
   const fileNames = fs.readdirSync(articleDirectory);
   return fileNames.map((fileName) => {
@@ -51,7 +51,7 @@ export function getAllPostIds() {
   });
 }
 
-// ブログリストの参照
+// ブログの参照
 export async function getPostData(id: string) {
   const fullPath = path.join(articleDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
