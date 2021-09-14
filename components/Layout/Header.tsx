@@ -5,7 +5,6 @@ import { AppBar, Toolbar, Tab } from "@material-ui/core";
 import {
   AiOutlineHome,
   AiOutlineUser,
-  AiOutlineCheckCircle,
 } from "react-icons/ai";
 
 import { CgNotes } from "react-icons/cg";
@@ -46,22 +45,16 @@ const Header: React.FC = () => {
                   href="/"
                 />
                 <Tab
-                  label="About"
-                  icon={<AiOutlineUser />}
-                  style={link}
-                  href="/About"
-                />
-                <Tab
                   label="Blog"
                   icon={<CgNotes />}
                   style={link}
                   href="/Blog"
                 />
                 <Tab
-                  label="Work"
-                  icon={<AiOutlineCheckCircle />}
+                  label="About"
+                  icon={<AiOutlineUser />}
                   style={link}
-                  href="/Work"
+                  href="/About"
                 />
               </div>
             </div>
