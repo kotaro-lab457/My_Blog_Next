@@ -30,7 +30,7 @@ const textPages = {
 };
 
 // 外部データからデータを取得するDynamic Routesを使用
-const Post: React.FC<{postData: postData}> = ({ postData }: { postData: postData } ) => {
+const Post: React.FC<{postData: postData}> = ({ postData }: { postData: postData }) => {
   return (
     <Layout>
       <Head>

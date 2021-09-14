@@ -35,7 +35,7 @@ const blogTitle = {
   padding: "0 3rem",
 };
 
-const Article: React.FC = () => {
+const ArticleList: React.FC = () => {
   return (
     <>
       <div style={blogPage}>
@@ -169,4 +169,4 @@ const Article: React.FC = () => {
   );
 };
 
-export default Article;
+export default ArticleList;

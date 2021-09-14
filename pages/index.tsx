@@ -3,10 +3,9 @@ import { GetStaticProps } from "next";
 
 import Layout, { siteTitle } from "@Components/Layout";
 import Top from "./Top";
-import Article from "@Components/Article";
 
 import { getSortedPostsData } from "@Lib/posts";
-import { allPostsData } from "@Modules"
+import { postsData } from "@Modules"
 
 import Posts from "@Pages/posts";
 
@@ -20,7 +19,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-export default function Home({ allPostsData }: {allPostsData: allPostsData}) {
+export default function Home({ allPostsData }: { allPostsData: postsData }) {
   return (
     <Layout>
       <Head>
@@ -28,7 +27,6 @@ export default function Home({ allPostsData }: {allPostsData: allPostsData}) {
       </Head>
       <Top />
       <Posts allPostsData={allPostsData} />
-      <Article />
     </Layout>
   );
 }
