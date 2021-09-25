@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import Date from "./Time";
 
-import { Paper, Button } from "@material-ui/core";
 import { listProps } from "@Modules"
 
 const blogText: { [key: string]: string } = {
@@ -27,8 +27,8 @@ const initText: { [key: string]: string } = {
 const Thumb: React.FC<listProps> = (props) => {
   return (
     <>
-      <Button style={blogTile} href={`/posts/${props.list.paths}`}>
-        <Paper elevation={3}>
+      <Link href={`/posts/${props.list.paths}`}>
+        <div>
           <Image
             priority
             src={`/images/${props.list.thumb}`}
@@ -42,8 +42,8 @@ const Thumb: React.FC<listProps> = (props) => {
             <p style={blogTitle}>{props.list.category}</p>
             <p style={blogTitle}>{props.list.title}</p>
           </div>
-        </Paper>
-      </Button>
+        </div>
+      </Link>
     </>
   );
 };

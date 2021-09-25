@@ -11,7 +11,6 @@ import { FaCode, FaUserCheck } from "react-icons/fa";
 import { BsCollectionPlayFill } from "react-icons/bs";
 import { FcEngineering } from "react-icons/fc";
 
-import Avatar from "@material-ui/core/Avatar";
 import SnsIcons from "@Components/SnsIcons";
 
 const about = {
@@ -75,14 +74,14 @@ const About: React.FC = () => {
               <h3>プロフィール</h3>
             </div>
             <div style={aboutMine}>
-              <Avatar style={avatar}>
+              <div style={avatar}>
                 <Image
                   priority
                   src="/images/catcat.png"
                   height={144}
                   width={144}
                 />
-              </Avatar>
+              </div>
               <div style={aboutMe}>
                 <p>鈴木孝太郎（すずき こうたろう）</p>
                 <p>1997年05月15日生まれ / 24歳</p>
