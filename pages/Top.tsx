@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-import Avatar from "@material-ui/core/Avatar";
 import SnsIcons from "@Components/SnsIcons";
 
 const myName = {
@@ -61,14 +60,14 @@ const Top: React.FC = () => {
       <div style={top}>
         <section style={topPage}>
           <div>
-            <Avatar style={avatar}>
+            <div style={avatar}>
               <Image
                 priority
                 src="/images/catcat.png"
                 height={144}
                 width={144}
               />
-            </Avatar>
+            </div>
             <h2 style={myName}>Suzuki Kotaro</h2>
           </div>
           <div>

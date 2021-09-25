@@ -3,12 +3,13 @@ import path from "path";
 import matter from "gray-matter";
 import remark from "remark";
 import html from "remark-html";
+import { matterResult } from "@Modules";
 
 // postsディレクトリの読み込み
 const articleDirectory = path.join(process.cwd(), "articles");
 
 // マークダウンファイルの読み込み（TOPページ）
-export function getSortedPostsData():any{
+export function getSortedPostsData(){
   // fs.readFileSync(ファイルのパス、文字こーど、コールバック関数)
 
   const fileNames = fs.readdirSync(articleDirectory);
@@ -21,26 +22,24 @@ export function getSortedPostsData():any{
       const fileContents = fs.readFileSync(fullPath, 'utf8');
       
       // matterを使用して投稿メタデータセクションを解析します
-      const matterResult = matter(fileContents);
+      const matterResult = matter(fileContents)
       // Combine the data with the id
       return {
         paths,
-        ...(matterResult.data as { date: string; title: string; thumb: string;}),
+        ...(matterResult.data as matterResult),
       };
     });
     // 日付順にする。
-    // console.log("サーバー",allPostsData);
-    
-    return allPostsData.sort((a, b) => {
-      if (a.date < b.date) {
-        return 1;
-      } else {
-        return -1;
-      }
-    });
+  return allPostsData.sort((a, b) => {
+    if (a.date < b.date) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
 }
 
-// ブログページのマークダウン
+// ブログページのパラメータ
 export function getAllPostIds() {
   const fileNames = fs.readdirSync(articleDirectory);
   return fileNames.map((fileName) => {
@@ -52,8 +51,8 @@ export function getAllPostIds() {
   });
 }
 
-// ブログリストの参照
-export async function getPostData(id:string) {
+// ブログの参照
+export async function getPostData(id: string) {
   const fullPath = path.join(articleDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 

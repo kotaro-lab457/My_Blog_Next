@@ -1,11 +1,9 @@
 import React from "react";
-
-import { AppBar, Toolbar, Tab } from "@material-ui/core";
+import Link from "next/link"
 
 import {
   AiOutlineHome,
   AiOutlineUser,
-  AiOutlineCheckCircle,
 } from "react-icons/ai";
 
 import { CgNotes } from "react-icons/cg";
@@ -34,39 +32,24 @@ const Header: React.FC = () => {
   return (
     <>
       <header>
-        <AppBar position="static" color="inherit">
-          <Toolbar>
+        <div>
+          <div>
             <div style={header}>
               <h1 style={title}>Kotaro Blog</h1>
               <div>
-                <Tab
-                  label="Top"
-                  icon={<AiOutlineHome />}
-                  style={link}
+                <Link
                   href="/"
-                />
-                <Tab
-                  label="About"
-                  icon={<AiOutlineUser />}
-                  style={link}
-                  href="/About"
-                />
-                <Tab
-                  label="Blog"
-                  icon={<CgNotes />}
-                  style={link}
+                >ホーム</Link>
+                <Link
                   href="/Blog"
-                />
-                <Tab
-                  label="Work"
-                  icon={<AiOutlineCheckCircle />}
-                  style={link}
-                  href="/Work"
-                />
+                >ブログ</Link>
+                <Link
+                  href="/About"
+                >about</Link>
               </div>
             </div>
-          </Toolbar>
-        </AppBar>
+          </div>
+        </div>
       </header>
     </>
   );

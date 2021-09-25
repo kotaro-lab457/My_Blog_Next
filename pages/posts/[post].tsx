@@ -3,19 +3,19 @@ import Image from "next/image";
 import Layout from "@Components/Layout";
 import Date from "@Components/Time";
 import { getAllPostIds, getPostData } from "@Lib/posts";
-import { postData,params } from "@Modules";
+import { postData, postParams } from "@Modules";
 
-// サーバーサイドを実行しているAPI
+// 事前生成するページのパス（URLのパラメータ）を返す。
 export const getStaticPaths = async () => {
   const paths = getAllPostIds();
   return {
-    paths,
+    paths, // 生成するページのパス
     fallback: false,
   };
 };
 
 // サーバーサイドを実行しているAPI
-export const getStaticProps = async ({ params }: params) => {
+export const getStaticProps = async ({ params }: postParams) => {
   const postData = await getPostData(params.post);
   return {
     props: {
@@ -30,7 +30,7 @@ const textPages = {
 };
 
 // 外部データからデータを取得するDynamic Routesを使用
-const Post: React.FC<{postData: postData}> = ({ postData }: { postData: postData } ) => {
+const Post: React.FC<{postData: postData}> = ({ postData }: { postData: postData }) => {
   return (
     <Layout>
       <Head>
@@ -48,7 +48,7 @@ const Post: React.FC<{postData: postData}> = ({ postData }: { postData: postData
           <Date dateString={postData.date} />
         </div>
         <div>
-          <p>{postData.category}</p>
+          <p>カテゴリー：{postData.category}</p>
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
