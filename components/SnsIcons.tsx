@@ -6,17 +6,23 @@ const SnsIcons: React.FC = () => {
   return (
     <>
       <Link href="https://github.com/kotaro-lab457">
-        <FaGithub />
+        <>
+          <FaGithub />
+        </>
       </Link>
       <Link
         href="https://twitter.com/programming0457"
       >
-        <FaTwitter />
+        <>
+          <FaTwitter />
+        </>
       </Link>
       <Link
         href="https://www.wantedly.com/id/suzukikkk"
       >
-        <FaWikipediaW />
+        <>
+          <FaWikipediaW />
+        </>
       </Link>
     </>
   );
