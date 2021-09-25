@@ -1,4 +1,5 @@
-import "../styles/global.css";
+import "../css/global.css";
+import '../css/tailwind.css';
 
 import React from "react";
 import Head from "next/head";
