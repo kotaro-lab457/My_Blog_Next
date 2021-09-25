@@ -3,12 +3,11 @@ import Head from "next/head";
 import { GetStaticProps } from "next";
 
 import Layout, { TitleText } from "@Components/Layout";
-import Article from "@Components/Article";
 
 import Posts from "@Pages/posts";
 
 import { getSortedPostsData } from "@Lib/posts";
-import { allPostsData } from "@Modules"
+import { postsData } from "@Modules"
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();
@@ -19,7 +18,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const Blog = ({ allPostsData }: { allPostsData: allPostsData }) => {
+const Blog = ({ allPostsData }: postsData) => {
   return (
     <Layout>
       <Head>
@@ -29,7 +28,6 @@ const Blog = ({ allPostsData }: { allPostsData: allPostsData }) => {
         <h1>Blog</h1>
       </TitleText>
       <Posts allPostsData={allPostsData} />
-      <Article />
     </Layout>
   );
 };

@@ -1,6 +1,7 @@
 import { GetStaticProps } from "next";
 
 import Thumb from "@Components/Thumb";
+import ArticleList from "@Components/ArticleList";
 
 import { getSortedPostsData } from "@Lib/posts";
 import { postsData, List } from "@Modules";
@@ -35,14 +36,14 @@ const item = {
   margin: "20px",
 };
 
-export default function Posts({ allPostsData }: { allPostsData: postsData }) {
+export default function Posts({ allPostsData }: postsData) {
   return (
     <>
       <div style={blogPage}>
         <h2 style={blogTitle}>Blog Posts</h2>
         <section>
           <ul style={list}>
-            {allPostsData.map((list:List, id:number) => (
+            {allPostsData.map((list: List, id: number) => (
               <li key={id} style={item}>
                 <Thumb list={list} />
               </li>
@@ -50,6 +51,7 @@ export default function Posts({ allPostsData }: { allPostsData: postsData }) {
           </ul>
         </section>
       </div>
+      <ArticleList />
     </>
   );
 }

@@ -3,13 +3,14 @@ import Image from "next/image";
 import Head from "next/head";
 
 import Layout, { siteTitle, TitleText } from "@Components/Layout";
+import WorkItems from "@Components/WorkItems";
 
 import { AiFillFileText } from "react-icons/ai";
 import { BiWorld } from "react-icons/bi";
 import { FaCode, FaUserCheck } from "react-icons/fa";
 import { BsCollectionPlayFill } from "react-icons/bs";
+import { FcEngineering } from "react-icons/fc";
 
-import Avatar from "@material-ui/core/Avatar";
 import SnsIcons from "@Components/SnsIcons";
 
 const about = {
@@ -73,14 +74,14 @@ const About: React.FC = () => {
               <h3>プロフィール</h3>
             </div>
             <div style={aboutMine}>
-              <Avatar style={avatar}>
+              <div style={avatar}>
                 <Image
                   priority
                   src="/images/catcat.png"
                   height={144}
                   width={144}
                 />
-              </Avatar>
+              </div>
               <div style={aboutMe}>
                 <p>鈴木孝太郎（すずき こうたろう）</p>
                 <p>1997年05月15日生まれ / 24歳</p>
@@ -143,6 +144,15 @@ const About: React.FC = () => {
                   </p>
                 </li>
               </ul>
+            </div>
+            <div>
+              <div style={textTitle}>
+                <span style={codeIcon}>
+                  <FcEngineering />
+                </span>
+                <h3>個人・チーム開発</h3>
+              </div>
+              <WorkItems />
             </div>
           </div>
         </div>
