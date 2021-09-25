@@ -17,15 +17,15 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }: categoryParams) => {
-  const categoryData = await getSortedCategoryData(params.category);
+  const allPostsData = await getSortedCategoryData(params.category);
   return {
     props: {
-      categoryData,
+      allPostsData,
     },
   };
 };
 
-const Category = ({ categoryData }: { categoryData: postsData }) => {
+export default function Category ({ allPostsData }: postsData) {
   return (
     <Layout>
       <Head>
@@ -33,7 +33,7 @@ const Category = ({ categoryData }: { categoryData: postsData }) => {
       </Head>
       <section>
           <ul>
-            {categoryData.map((list: List, id:number) => (
+            {allPostsData.map((list: List, id:number) => (
               <li key={id}>
                 <Thumb list={list} />
               </li>
@@ -43,5 +43,3 @@ const Category = ({ categoryData }: { categoryData: postsData }) => {
     </Layout>
   );
 };
-
-export default Category;

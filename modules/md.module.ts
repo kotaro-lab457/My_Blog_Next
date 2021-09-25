@@ -27,15 +27,17 @@ export type categoryData = {
 }
 
 export type postsData = {
-  date: string,
-  title: string,
-  paths: string,
-  thumb: string,
-  category: string,
-  tag: [
-    string,
-  ]
-}[]
+  allPostsData: {
+    date: string,
+    title: string,
+    paths: string,
+    thumb: string,
+    category: string,
+    tag: [
+      string,
+    ]
+  }[],
+}
 
 export type postData = {
   title: string,

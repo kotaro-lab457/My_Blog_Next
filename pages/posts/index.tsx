@@ -36,7 +36,7 @@ const item = {
   margin: "20px",
 };
 
-export default function Posts({ allPostsData }: { allPostsData: postsData }) {
+export default function Posts({ allPostsData }: postsData) {
   return (
     <>
       <div style={blogPage}>
