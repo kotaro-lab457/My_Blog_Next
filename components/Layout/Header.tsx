@@ -18,17 +18,26 @@ const Header: React.FC = () => {
           </div>
           <div className="flex items-center">
             <Link href="/">
-              <div className="flex items-center">
+              <div className="
+                flex items-center
+                cursor-pointer
+              ">
                 <AiOutlineHome/>ホーム
               </div>
             </Link>
             <Link href="/Blog">
-              <div className="flex items-center pl-4">
+              <div className="
+                flex items-center
+                pl-4 cursor-pointer
+              ">
                 <CgNotes />ブログ
               </div>
             </Link>
             <Link href="/About">
-              <div className="flex items-center pl-4">
+              <div className="
+                flex items-center
+                pl-4 cursor-pointer
+              ">
                 <AiOutlineUser />about
               </div>
             </Link>

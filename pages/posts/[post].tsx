@@ -24,11 +24,6 @@ export const getStaticProps = async ({ params }: postParams) => {
   };
 };
 
-const textPages = {
-  width: "45vw",
-  margin: "2rem auto",
-};
-
 // 外部データからデータを取得するDynamic Routesを使用
 const Post: React.FC<{postData: postData}> = ({ postData }: { postData: postData }) => {
   return (
@@ -36,12 +31,12 @@ const Post: React.FC<{postData: postData}> = ({ postData }: { postData: postData
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article style={textPages}>
+      <article className="mx-auto py-7 w-2/4">
         <Image
           priority
           src={`/images/${postData.thumb}`}
-          height={430}
-          width={700}
+          height={400}
+          width={600}
         />
         <h1>{postData.title}</h1>
         <div>
