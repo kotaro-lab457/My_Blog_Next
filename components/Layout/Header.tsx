@@ -8,46 +8,30 @@ import {
 
 import { CgNotes } from "react-icons/cg";
 
-const header = {
-  display: "flex",
-  justifyContent: "space-between",
-  width: "100%",
-  padding: "10px 4rem",
-};
-
-const title = {
-  fontSize: "3rem",
-  fontFamily: "Apple Chancery",
-  margin: "0",
-};
-
-const link = {
-  fontSize: "1rem",
-  color: "#000",
-  minWidth: "100px",
-  width: "120px",
-};
-
 const Header: React.FC = () => {
   return (
     <>
       <header>
-        <div>
+        <div className="flex justify-between py-2 px-16">
           <div>
-            <div style={header}>
-              <h1 style={title}>Kotaro Blog</h1>
-              <div>
-                <Link
-                  href="/"
-                >ホーム</Link>
-                <Link
-                  href="/Blog"
-                >ブログ</Link>
-                <Link
-                  href="/About"
-                >about</Link>
+            <h1 className="text-4xl m-0 font-Apple">Kotaro Blog</h1>
+          </div>
+          <div className="flex items-center">
+            <Link href="/">
+              <div className="flex items-center">
+                <AiOutlineHome/>ホーム
               </div>
-            </div>
+            </Link>
+            <Link href="/Blog">
+              <div className="flex items-center pl-4">
+                <CgNotes />ブログ
+              </div>
+            </Link>
+            <Link href="/About">
+              <div className="flex items-center pl-4">
+                <AiOutlineUser />about
+              </div>
+            </Link>
           </div>
         </div>
       </header>

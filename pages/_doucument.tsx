@@ -22,20 +22,20 @@ export default class MyDocument extends Document {
 }
 
 MyDocument.getInitialProps = async (ctx) => {
-  const originalRenderPage = ctx.renderPage;
+  // const originalRenderPage = ctx.renderPage;
 
-  ctx.renderPage = () =>
-    originalRenderPage({
-      enhanceApp: (App) => (props) => <App {...props} />,
-    });
+  // ctx.renderPage = () =>
+  //   originalRenderPage({
+  //     enhanceApp: (App) => (props) => <App {...props} />,
+  //   });
 
   const initialProps = await Document.getInitialProps(ctx);
 
   return {
     ...initialProps,
     // Styles fragment is rendered after the app and page rendering finish.
-    styles: [
-      ...React.Children.toArray(initialProps.styles),
-    ],
+    // styles: [
+    //   ...React.Children.toArray(initialProps.styles),
+    // ],
   };
 };

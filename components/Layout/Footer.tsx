@@ -6,14 +6,12 @@ const footer = {
   backgroundColor: "#000",
 };
 
-const writeFont = {
-  color: "#fff",
-};
-
 const Footer: React.FC = () => {
   return (
     <footer style={footer}>
-      <p style={writeFont}>copylighting kotaro-suzuki</p>
+      <p className='text-white' >
+        copy-lighting kotaro-suzuki
+      </p>
     </footer>
   );
 };
