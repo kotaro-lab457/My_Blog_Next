@@ -1,20 +1,22 @@
 import React from "react";
 
 const footer = {
-  display: "flex",
-  justifyContent: "center",
   backgroundColor: "#000",
 };
 
-const writeFont = {
-  color: "#fff",
-};
+const footerText = {
+  color:"#fff",
+}
 
 const Footer: React.FC = () => {
   return (
-    <footer style={footer}>
-      <p style={writeFont}>copylighting kotaro-suzuki</p>
-    </footer>
+    <>
+      <footer style={footer} className="flex justify-center py-2">
+        <p style={footerText}>
+          copy-lighting kotaro-suzuki
+        </p>
+      </footer>
+    </>
   );
 };
 

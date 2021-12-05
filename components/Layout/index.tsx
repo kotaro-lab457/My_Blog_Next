@@ -5,11 +5,6 @@ import  Header  from "./Header";
 
 export const siteTitle = "S.Kotaro Blog Web";
 
-const pages = {
-  width: "100%",
-  margin: "0 auto",
-};
-
 const titlePage: { [key: string]: string } = {
   width: "100%",
   backgroundColor: "#ebebeb",
@@ -31,7 +26,7 @@ const Layout: React.FC = ({ children }) => {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Header />
-      <main style={pages}>{children}</main>
+      <main className="w-full mx-auto pb-6">{children}</main>
       <Footer />
     </>
   );
