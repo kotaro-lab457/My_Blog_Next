@@ -11,7 +11,7 @@ import { CgNotes } from "react-icons/cg";
 const Header: React.FC = () => {
   return (
     <>
-      <header>
+      <header className="">
         <div className="flex justify-between py-2 px-16">
           <div>
             <h1 className="text-4xl m-0 font-Apple">Kotaro Blog</h1>

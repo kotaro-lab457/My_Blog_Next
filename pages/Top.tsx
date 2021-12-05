@@ -3,10 +3,6 @@ import Image from "next/image";
 
 import SnsIcons from "@Components/SnsIcons";
 
-const myName = {
-  fontFamily: "Courier New",
-};
-
 const topPage = {
   display: "flex",
   margin: "3rem auto",
@@ -37,7 +33,7 @@ const Top: React.FC = () => {
               width={120}
               className="rounded-full"
             />
-          <h2 style={myName}>Suzuki Kotaro</h2>
+          <h2 className="font-Courier">Suzuki Kotaro</h2>
         </div>
         <div className="ml-8">
           <p>現在、SES企業に勤めている新米エンジニアです。</p>

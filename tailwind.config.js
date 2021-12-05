@@ -8,7 +8,8 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      'Apple': 'Apple Chancery'
+      'Apple': 'Apple Chancery',
+      'Courier': 'Courier New',
     },
     colors: {
       gray: colors.coolGray,
