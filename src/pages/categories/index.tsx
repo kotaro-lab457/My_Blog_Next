@@ -6,7 +6,7 @@ import CategoryList from "@Components/CategoryList";
 
 import { getFilterCategoryData } from "@Lib/categories";
 
-import { categoryData } from "@Modules";
+import { categoryData } from "@Modules/index";
 
 export const getStaticProps: GetStaticProps = async () => {
   const categories = await getFilterCategoryData();

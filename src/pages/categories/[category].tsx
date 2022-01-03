@@ -5,7 +5,7 @@ import Thumb from "@Components/Thumb";
 
 import { getAllCategoryIds, getSortedCategoryData } from "@Lib/categories";
 
-import { postsData, List, categoryParams } from "@Modules";
+import { postsData, List, categoryParams } from "@Modules/index";
 
 // ダイナミックルータの利用時に静的なファイルとして生成するAPI。
 export const getStaticPaths = async () => {

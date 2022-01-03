@@ -7,7 +7,7 @@ import Layout, { TitleText } from "@Components/Layout";
 import Posts from "@Pages/posts";
 
 import { getSortedPostsData } from "@Lib/posts";
-import { postsData } from "@Modules"
+import { postsData } from "@Modules/index"
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();

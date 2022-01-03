@@ -1,5 +1,4 @@
 import { getSortedPostsData } from './posts'
-import { matterResult } from "@Modules";
 
 export function getSortedCategoryData(id: string) {
   // fs.readFileSync(ファイルのパス、文字こーど、コールバック関数)

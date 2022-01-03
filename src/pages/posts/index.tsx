@@ -4,7 +4,7 @@ import Thumb from "@Components/Thumb";
 import ArticleList from "@Components/ArticleList";
 
 import { getSortedPostsData } from "@Lib/posts";
-import { postsData, List } from "@Modules";
+import { postsData, List } from "@Modules/index";
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();

@@ -5,7 +5,7 @@ import Layout, { siteTitle } from "@Components/Layout";
 import Top from "./Top";
 
 import { getSortedPostsData } from "@Lib/posts";
-import { postsData } from "@Modules"
+import { postsData } from "@Modules/index";
 
 import Posts from "@Pages/posts";
 

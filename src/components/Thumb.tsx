@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import Date from "./Time";
 
-import { listProps } from "@Modules"
+import { listProps } from "@Modules/index"
 
 const Thumb: React.FC<listProps> = (props) => {
   return (

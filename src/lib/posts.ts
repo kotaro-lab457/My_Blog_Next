@@ -3,7 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import remark from "remark";
 import html from "remark-html";
-import { matterResult } from "@Modules";
+import { matterResult } from "@Modules/index";
 
 // postsディレクトリの読み込み
 const articleDirectory = path.join(process.cwd(), "articles");

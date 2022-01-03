@@ -3,7 +3,7 @@ import Image from "next/image";
 import Layout from "@Components/Layout";
 import Date from "@Components/Time";
 import { getAllPostIds, getPostData } from "@Lib/posts";
-import { postData, postParams } from "@Modules";
+import { postData, postParams } from "@Modules/index";
 
 // 事前生成するページのパス（URLのパラメータ）を返す。
 export const getStaticPaths = async () => {
