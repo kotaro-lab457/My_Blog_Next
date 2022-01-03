@@ -18,7 +18,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const Blog = ({ allPostsData }: { allPostsData: postsData }) => {
+const Blog = ({ allPostsData }: postsData) => {
   return (
     <Layout>
       <Head>

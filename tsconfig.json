@@ -32,6 +32,9 @@
       "@Lib/*": [
         "lib/*",
       ],
+      "@TailwindCSS": [
+        "css/tailwind.css",
+      ],
     }
   },
   "include": [

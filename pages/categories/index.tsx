@@ -37,6 +37,6 @@ const Categories = ({ categories }: categoryData) => {
       </div>
     </Layout>
   );
-}
+};
 
 export default Categories;

@@ -14,12 +14,12 @@ export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = await getSortedPostsData();
   return {
     props: {
-      allPostsData
+      allPostsData,
     },
   };
 };
 
-export default function Home({ allPostsData }: { allPostsData: postsData }) {
+export default function Home({ allPostsData }: postsData) {
   return (
     <Layout>
       <Head>
