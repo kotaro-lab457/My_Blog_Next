@@ -2,7 +2,9 @@
 
 PF 兼自分用ブログサイトを作成しました。プログラミングを中心にプライベートな発信していくサイトを`Next.js`で制作しました。
 
-<img width="980" alt="スクリーンショット 2021-05-22 15 38 43" src="https://user-images.githubusercontent.com/69884513/119217335-7d3fb800-bb14-11eb-921f-64220507fec8.png">
+<!-- <img width="980" alt="スクリーンショット 2021-05-22 15 38 43" src="https://user-images.githubusercontent.com/69884513/119217335-7d3fb800-bb14-11eb-921f-64220507fec8.png"> -->
+
+- Vercel Url：https://vercel.com/kotaro-lab457
 
 ## 今後追加していく機能
 
