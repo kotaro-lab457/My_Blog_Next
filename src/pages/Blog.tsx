@@ -1,13 +1,10 @@
-import React from "react";
-import Head from "next/head";
-import { GetStaticProps } from "next";
-
-import Layout, { TitleText } from "@Components/Layout";
-
-import Posts from "@Pages/posts";
-
-import { getSortedPostsData } from "@Lib/posts";
-import { postsData } from "@Modules/index"
+import React from 'react';
+import Head from 'next/head';
+import { GetStaticProps } from 'next';
+import Layout, { TitleText } from '@Components/Layout';
+import Posts from '@Pages/posts';
+import { getSortedPostsData } from '@Lib/posts';
+import { postsData } from '@Modules/index';
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();

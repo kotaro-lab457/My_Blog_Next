@@ -39,11 +39,8 @@
   },
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "src/components/Time.tsx",
-    "src/lib/posts.ts",
-    "src/pages/posts/[blog].tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
   ],
   "exclude": [
     "node_modules"
