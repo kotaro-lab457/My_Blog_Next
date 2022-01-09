@@ -1,58 +1,55 @@
-import React from "react";
-import Image from "next/image";
-import Head from "next/head";
-
-import Layout, { siteTitle, TitleText } from "@Components/Layout";
-import WorkItems from "@Components/WorkItems";
-
-import { AiFillFileText } from "react-icons/ai";
-import { BiWorld } from "react-icons/bi";
-import { FaCode, FaUserCheck } from "react-icons/fa";
-import { BsCollectionPlayFill } from "react-icons/bs";
-import { FcEngineering } from "react-icons/fc";
-
-import SnsIcons from "@Components/SnsIcons";
+import React from 'react';
+import Image from 'next/image';
+import Head from 'next/head';
+import Layout, { siteTitle, TitleText } from '@Components/Layout';
+import WorkItems from '@Components/WorkItems';
+import SnsIcons from '@Components/SnsIcons';
+import { AiFillFileText } from 'react-icons/ai';
+import { BiWorld } from 'react-icons/bi';
+import { FaCode, FaUserCheck } from 'react-icons/fa';
+import { BsCollectionPlayFill } from 'react-icons/bs';
+import { FcEngineering } from 'react-icons/fc';
 
 const about = {
-  width: "50vw",
-  margin: "0 auto",
+  width: '50vw',
+  margin: '0 auto',
 };
 
 const aboutMine = {
-  display: "flex",
-  padding: "10px 50px",
+  display: 'flex',
+  padding: '10px 50px',
 };
 
 const aboutMe = {
-  margin: "1rem 0 0 2rem",
+  margin: '1rem 0 0 2rem',
 };
 
 const aboutText = {
-  marginLeft: "1rem",
+  marginLeft: '1rem',
 };
 
 const textTitle = {
-  display: "flex",
+  display: 'flex',
 };
 
 const textIcon = {
-  fontSize: "2rem",
-  padding: "10px 15px 0 0",
+  fontSize: '2rem',
+  padding: '10px 15px 0 0',
 };
 
 const codeIcon = {
-  color: "#00b0ff",
-  fontSize: "2rem",
-  padding: "10px 15px 0 0",
+  color: '#00b0ff',
+  fontSize: '2rem',
+  padding: '10px 15px 0 0',
 };
 
 const snsIcons = {
-  margin: "0 0 1rem 1rem",
+  margin: '0 0 1rem 1rem',
 };
 
 const avatar = {
-  width: "120px",
-  height: "120px",
+  width: '120px',
+  height: '120px',
 };
 
 const About: React.FC = () => {
@@ -75,12 +72,7 @@ const About: React.FC = () => {
             </div>
             <div style={aboutMine}>
               <div style={avatar}>
-                <Image
-                  priority
-                  src="/images/catcat.png"
-                  height={144}
-                  width={144}
-                />
+                <Image priority src='/images/catcat.png' height={144} width={144} />
               </div>
               <div style={aboutMe}>
                 <p>鈴木孝太郎（すずき こうたろう）</p>
@@ -103,10 +95,7 @@ const About: React.FC = () => {
               <h3>趣味</h3>
             </div>
             <div style={aboutText}>
-              <p>
-                テニス🎾 / サウナ🧖‍♀️ / 読書📕 / キャンプ🏕 / 山登り⛰ / Netflix🎦
-                などなど　
-              </p>
+              <p>テニス🎾 / サウナ🧖‍♀️ / 読書📕 / キャンプ🏕 / 山登り⛰ / Netflix🎦 などなど　</p>
             </div>
             <div>
               <div style={textTitle}>
@@ -139,8 +128,8 @@ const About: React.FC = () => {
                 <li>
                   <p>その他技術</p>
                   <p>
-                    Git / Github / FireBase / styled-component (Atomic Design) /
-                    Google Books API / Twitter API
+                    Git / Github / FireBase / styled-component (Atomic Design) / Google Books API /
+                    Twitter API
                   </p>
                 </li>
               </ul>

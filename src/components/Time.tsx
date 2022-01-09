@@ -1,8 +1,8 @@
-import { parseISO, format } from "date-fns";
+import { parseISO, format } from 'date-fns';
 
-const Date = ({ dateString }: {dateString: string}) => {
+const Date = ({ dateString }: { dateString: string }) => {
   const date = parseISO(dateString);
-  const days = format(date, "LLLL d, yyyy");
+  const days = format(date, 'LLLL d, yyyy');
   return <time dateTime={dateString}>{days}</time>;
 };
 
