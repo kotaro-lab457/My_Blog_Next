@@ -14,7 +14,7 @@ const Header: React.FC = () => {
             <h1 className='text-4xl m-0 font-Apple'>Kotaro Blog</h1>
           </div>
           <div className='flex items-center'>
-            <Link href='/'>
+            <Link href='/' passHref>
               <div
                 className='
                 flex items-center
@@ -25,7 +25,7 @@ const Header: React.FC = () => {
                 ホーム
               </div>
             </Link>
-            <Link href='/Blog'>
+            <Link href='/Blog' passHref>
               <div
                 className='
                 flex items-center
@@ -36,7 +36,7 @@ const Header: React.FC = () => {
                 ブログ
               </div>
             </Link>
-            <Link href='/About'>
+            <Link href='/About' passHref>
               <div
                 className='
                 flex items-center

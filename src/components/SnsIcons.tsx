@@ -14,7 +14,7 @@ const SnsIcons: React.FC = () => {
   return (
     <>
       <div className='flex justify-end'>
-        <Link href='https://github.com/kotaro-lab457'>
+        <Link href='https://github.com/kotaro-xxzw7z' passHref>
           <div
             className='
             transition duration-500
@@ -27,7 +27,7 @@ const SnsIcons: React.FC = () => {
             <FaGithub />
           </div>
         </Link>
-        <Link href='https://twitter.com/programming0457'>
+        <Link href='https://twitter.com/programming0457' passHref>
           <div
             style={iconBlue}
             className='
@@ -42,7 +42,7 @@ const SnsIcons: React.FC = () => {
             <FaTwitter />
           </div>
         </Link>
-        <Link href='https://www.wantedly.com/id/suzukikkk'>
+        <Link href='https://www.wantedly.com/id/suzukikkk' passHref>
           <div
             style={iconSkyBlue}
             className='
