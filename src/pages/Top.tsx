@@ -13,7 +13,7 @@ const Top: React.FC = () => {
     <>
       <div className='relative'>
         <div className='w-full h-40'>
-          <img className='w-full h-full' src={`/images/2021sky-bg.jpeg`} />
+          <Image alt='backgroundImage' width='100%' height='100%' src={`/images/2021sky-bg.jpeg`} />
         </div>
         <div className='w-full absolute top-10'>
           <h2 className='text-6xl font-Apple text-center'>Kotaro Blog</h2>
@@ -24,6 +24,7 @@ const Top: React.FC = () => {
           <div>
             <Image
               priority
+              alt='profile icon'
               src='/images/catcat.png'
               height={120}
               width={120}

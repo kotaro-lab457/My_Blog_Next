@@ -72,7 +72,13 @@ const About: React.FC = () => {
             </div>
             <div style={aboutMine}>
               <div style={avatar}>
-                <Image priority src='/images/catcat.png' height={144} width={144} />
+                <Image
+                  priority
+                  alt='profileIcon'
+                  src='/images/catcat.png'
+                  height={144}
+                  width={144}
+                />
               </div>
               <div style={aboutMe}>
                 <p>鈴木孝太郎（すずき こうたろう）</p>
@@ -105,8 +111,8 @@ const About: React.FC = () => {
                 <h3>経歴</h3>
               </div>
               <ul>
-                <li>2016年4月 〜 2020年3月：株式会社トーエネック</li>
-                <li>2013年4月 〜 2016年3月：愛知県立春日井工業高校</li>
+                <li>2016年4月 〜 2020年3月 : 株式会社トーエネック</li>
+                <li>2013年4月 〜 2016年3月 : 愛知県立春日井工業高校</li>
               </ul>
             </div>
             <div>

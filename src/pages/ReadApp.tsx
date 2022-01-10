@@ -20,19 +20,24 @@ const ReadApp = () => {
           <h1>Read Out</h1>
           <p>読書アウトプットWebアプリ</p>
           <div>
-            <Image priority src='/images/read_out.jpeg' width={1000} height={500} />
+            <Image
+              priority
+              alt='backgroundImage'
+              src='/images/read_out.jpeg'
+              width={1000}
+              height={500}
+            />
           </div>
           <div>
             <p>
-              Github：
-              <Link href='https://github.com/kotaro-lab457/ReadOut'>ソースコード</Link>
+              Github :<Link href='https://github.com/kotaro-lab457/ReadOut'>ソースコード</Link>
             </p>
             <p>
               Qiita解説記事は
               <Link href='https://qiita.com/s_taro/items/bb607598d8eb45c70d39'>こちら</Link>
             </p>
             <p>
-              URL：
+              URL :
               <Link href='https://my-portfolio-986db.web.app/'>
                 https://my-portfolio-986db.web.app/
               </Link>

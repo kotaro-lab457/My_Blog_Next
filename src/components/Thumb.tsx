@@ -9,9 +9,9 @@ import { listProps } from '@Modules/index';
 const Thumb: React.FC<listProps> = (props) => {
   return (
     <>
-      <Link href={`/posts/${props.list.paths}`}>
+      <Link href={`/posts/${props.list.paths}`} passHref>
         <div className='shadow-lg'>
-          <Image priority src={`/images/${props.list.thumb}`} height={200} width={300} />
+          <Image priority alt='blog' src={`/images/${props.list.thumb}`} height={200} width={300} />
           <div className='text-left px-2'>
             <small>
               <Date dateString={props.list.date} />

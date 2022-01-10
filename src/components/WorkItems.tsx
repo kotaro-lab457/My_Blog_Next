@@ -24,7 +24,13 @@ const WorkItems: React.FC = () => {
               <div style={workItem}>
                 <h2 style={workItemTitle}>Read Out</h2>
                 <p>読書アウトプットアプリ</p>
-                <Image priority src='/images/read_out.jpeg' width={600} height={300} />
+                <Image
+                  priority
+                  alt='portfolio'
+                  src='/images/read_out.jpeg'
+                  width={600}
+                  height={300}
+                />
                 <p>読書した内容をアウトプット＆共有するアプリ</p>
                 <p>
                   詳細については
@@ -38,7 +44,13 @@ const WorkItems: React.FC = () => {
               <div style={workItem}>
                 <h2 style={workItemTitle}>共同開発</h2>
                 <p>チャットアプリ。</p>
-                <Image priority src='/images/team_codevillage.jpeg' width={600} height={300} />
+                <Image
+                  priority
+                  alt='codevillage'
+                  height={300}
+                  src='/images/team_codevillage.jpeg'
+                  width={600}
+                />
                 <p>共同開発の制作アプリ／Githubを使用した共同開発</p>
                 <p>※リンクはありません。</p>
               </div>
