@@ -2,9 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '@Components/Layout';
 import Thumb from '@Components/Thumb';
-
 import { getAllCategoryIds, getSortedCategoryData } from '@Lib/categories';
-
 import { postsData, List, categoryParams } from '@Modules/index';
 
 // ダイナミックルータの利用時に静的なファイルとして生成するAPI。

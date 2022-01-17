@@ -4,17 +4,8 @@ import Footer from './Footer';
 import Header from './Header';
 
 export const siteTitle = 'S.Kotaro Blog Web';
-
-const titlePage: { [key: string]: string } = {
-  width: '100%',
-  backgroundColor: '#ebebeb',
-  textAlign: 'center',
-  padding: '1rem 0',
-  marginBottom: '2rem',
-};
-
 export const TitleText: React.FC = ({ children }) => {
-  return <div style={titlePage}>{children}</div>;
+  return <div className='text-4xl w-full mb-6 text-center py-5 bg-gray-100'>{children}</div>;
 };
 
 const Layout: React.FC = ({ children }) => {
