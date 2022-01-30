@@ -22,7 +22,7 @@ const Header: React.FC = () => {
               '
               >
                 <AiOutlineHome />
-                ホーム
+                Home
               </div>
             </Link>
             <Link href='/Blog' passHref>
@@ -33,7 +33,7 @@ const Header: React.FC = () => {
               '
               >
                 <CgNotes />
-                ブログ
+                Blog
               </div>
             </Link>
             <Link href='/About' passHref>
@@ -44,7 +44,7 @@ const Header: React.FC = () => {
               '
               >
                 <AiOutlineUser />
-                about
+                About
               </div>
             </Link>
           </div>
