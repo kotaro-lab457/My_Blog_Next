@@ -11,11 +11,11 @@ module.exports = {
     colors: {
       gray: colors.coolGray,
     },
-    // extends: {
-    //   backgroundImage: {
-    //     'top-back': "url('./public/images/2021sky-bg.jpeg')",
-    //   },
-    // },
+    extend: {
+      backgroundImage: () => ({
+        'top-back': "url('../public/images/2021sky-bg.jpeg')",
+      }),
+    },
   },
   variants: {
     extend: {},
