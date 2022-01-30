@@ -14,7 +14,7 @@ const SnsIcons: React.FC = () => {
   return (
     <>
       <div className='flex justify-end'>
-        <Link href='https://github.com/kotaro-xxzw7z' passHref>
+        <Link href='https://github.com/kotaro-lab457' passHref>
           <div
             className='
             transition duration-500
