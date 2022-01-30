@@ -2,19 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import SnsIcons from '@Components/SnsIcons';
 
-const topPage = {
-  display: 'flex',
-  margin: '3rem auto',
-  width: '50vw',
-};
-
 const Top: React.FC = () => {
   return (
     <>
       <div className='relative'>
-        <div className='w-full h-40 bg-top-back'></div>
+        <div className='w-full h-40 bg-top-back' />
         <div className='w-full absolute top-10'>
-          <h2 className='text-6xl font-Apple text-center'>Kotaro Blog</h2>
+          <h1 className='text-6xl font-Apple text-center'>Kotaro Blog</h1>
         </div>
       </div>
       <div className='py-10'>

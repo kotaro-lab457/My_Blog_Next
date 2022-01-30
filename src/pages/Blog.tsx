@@ -7,7 +7,7 @@ import { getSortedPostsData } from '@Lib/posts';
 import { postsData } from '@Modules/index';
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = await getSortedPostsData();
   return {
     props: {
       allPostsData,

@@ -1,9 +1,9 @@
-import Head from "next/head";
-import Image from "next/image";
-import Layout from "@Components/Layout";
-import Date from "@Components/Time";
-import { getAllPostIds, getPostData } from "@Lib/posts";
-import { postData, postParams } from "@Modules/index";
+import Head from 'next/head';
+import Image from 'next/image';
+import Layout from '@Components/Layout';
+import Date from '@Components/Time';
+import { getAllPostIds, getPostData } from '@Lib/posts';
+import { postData, postParams } from '@Modules/index';
 
 // 事前生成するページのパス（URLのパラメータ）を返す。
 export const getStaticPaths = async () => {
@@ -25,15 +25,16 @@ export const getStaticProps = async ({ params }: postParams) => {
 };
 
 // 外部データからデータを取得するDynamic Routesを使用
-const Post: React.FC<{postData: postData}> = ({ postData }: { postData: postData }) => {
+const Post: React.FC<{ postData: postData }> = ({ postData }: { postData: postData }) => {
   return (
     <Layout>
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article className="mx-auto py-7 w-2/4">
+      <article className='mx-auto py-7 w-2/4'>
         <Image
           priority
+          alt='BlogImages'
           src={`/images/${postData.thumb}`}
           height={400}
           width={600}

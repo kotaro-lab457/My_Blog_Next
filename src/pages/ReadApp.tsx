@@ -4,11 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '@Components/Layout';
 
-const portfolio = {
-  width: '60vw',
-  margin: '2rem auto',
-};
-
 const ReadApp = () => {
   return (
     <>
@@ -16,7 +11,7 @@ const ReadApp = () => {
         <title>S.kotaro portfolio site</title>
       </Head>
       <Layout>
-        <div style={portfolio}>
+        <div className='w-40 my-7 mx-auto'>
           <h1>Read Out</h1>
           <p>読書アウトプットWebアプリ</p>
           <div>

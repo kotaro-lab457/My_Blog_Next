@@ -7,7 +7,7 @@ import { postsData, List, categoryParams } from '@Modules/index';
 
 // ダイナミックルータの利用時に静的なファイルとして生成するAPI。
 export const getStaticPaths = async () => {
-  const paths = getAllCategoryIds();
+  const paths = await getAllCategoryIds();
   return {
     paths,
     fallback: false,
