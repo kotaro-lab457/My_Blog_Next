@@ -1,5 +1,5 @@
 import Head from 'next/head';
-
+import { Props } from '@Modules/index';
 import Footer from './Footer';
 import Header from './Header';
 
@@ -8,7 +8,7 @@ export const TitleText: React.FC = ({ children }) => {
   return <div className='text-4xl w-full mb-6 text-center py-5 bg-gray-100'>{children}</div>;
 };
 
-const Layout: React.FC = ({ children }) => {
+const Layout: React.FC<Props> = ({ children }) => {
   return (
     <>
       <Head>

@@ -15,7 +15,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const Blog = ({ allPostsData }: postsData) => {
+const Blog: React.FC<postsData> = ({ allPostsData }) => {
   return (
     <Layout>
       <Head>

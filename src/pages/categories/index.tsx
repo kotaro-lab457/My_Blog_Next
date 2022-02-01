@@ -3,7 +3,6 @@ import Head from 'next/head';
 import { GetStaticProps } from 'next';
 import Layout, { siteTitle } from '@Components/Layout';
 import CategoryList from '@Components/CategoryList';
-
 import { getFilterCategoryData } from '@Lib/categories';
 
 import { categoryData } from '@Modules/index';
@@ -17,7 +16,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const Categories = ({ categories }: categoryData) => {
+const Categories: React.FC<categoryData> = ({ categories }) => {
   return (
     <Layout>
       <Head>
