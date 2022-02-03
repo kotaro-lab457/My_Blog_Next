@@ -1,19 +1,7 @@
-import { GetStaticProps } from 'next';
-
 import Thumb from '@Components/Thumb';
 import ArticleList from '@Components/ArticleList';
 
-import { getSortedPostsData } from '@Lib/posts';
 import { postsData, List } from '@Modules/index';
-
-export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = await getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
-};
 
 export default function Posts({ allPostsData }: postsData) {
   return (
