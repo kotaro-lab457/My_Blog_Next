@@ -1,15 +1,20 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import { GetStaticPaths } from 'next';
 import Layout from '@Components/Layout';
 import Date from '@Components/Time';
 import { getAllPostIds, getPostData } from '@Lib/posts';
 import { postData, postParams } from '@Modules/index';
 
+type Props = {
+  postData: postData;
+};
+
 // 事前生成するページのパス（URLのパラメータ）を返す。
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getAllPostIds();
   return {
-    paths, // 生成するページのパス
+    paths,
     fallback: false,
   };
 };
@@ -25,7 +30,7 @@ export const getStaticProps = async ({ params }: postParams) => {
 };
 
 // 外部データからデータを取得するDynamic Routesを使用
-const Post: React.FC<{ postData: postData }> = ({ postData }: { postData: postData }) => {
+const Post: React.FC<Props> = ({ postData }) => {
   return (
     <Layout>
       <Head>
