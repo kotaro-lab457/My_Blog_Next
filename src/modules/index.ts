@@ -30,15 +30,22 @@ export type categoryData = {
   categories: string[];
 };
 
+export type allPostsData = {
+  date: string;
+  title: string;
+  paths: string;
+  thumb: string;
+  category: string;
+  tag: [string];
+}[];
+
+export type posts = {
+  categories: string[];
+  allPostsData: allPostsData;
+};
+
 export type postsData = {
-  allPostsData: {
-    date: string;
-    title: string;
-    paths: string;
-    thumb: string;
-    category: string;
-    tag: [string];
-  }[];
+  allPostsData: allPostsData;
 };
 
 export type postData = {
